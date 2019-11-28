@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <input type="text" id="txt">
+    <p id="show-txt">0</p>
+  </div>
+  <script>
+    var ipt = document.getElementById('txt')
+    var obj = {}
+    Object.defineProperty(obj, 'txt', {
+      get (){
+        console.log(123)
+        return obj
+      },
+      set(newVal){const originPush = Array.prototype.push;
+    Array.prototype.push = function (...args) {
+      // 1自定义功能
+      console.log("数组变化")
+      // 2原有功能
+      originPush.apply(this, args);
+      h();
+    }
+        document.getElementById('show-txt').innerHTML = newVal
+      }
+    })
+    document.addEventListener('keyup', function(e) {
+      console.log(e)
+      obj.txt = e.target.value
+    })
+  </script>
+</body>
+</html>
