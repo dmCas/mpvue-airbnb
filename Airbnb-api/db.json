@@ -1,0 +1,38 @@
+{
+  "indexPage": {
+    "advertise":[
+      {
+        "id": "1",
+        "desc":"元旦精彩特惠季团聚尽在爱彼迎",
+        "extra":"领取千元团聚礼包",
+        "PicUrl":"https://z1.muscache.cn/pictures/hongbao/marquee/original/d2acad28-b15a-4619-9977-06615a70d35b.jpg"
+      },
+      {
+        "id": "2",
+        "desc":"跳上高铁去旅行",
+        "extra":"游南逛北过冬天",
+        "PicUrl":"https://z1.muscache.cn/pictures/hongbao/marquee/original/eb70e28c-2ba9-4dee-b5ac-dbfa9e5029e2.jpg"
+      },
+      {
+        "id": "3",
+        "desc":"爱彼迎✖QQ音乐跟随",
+        "extra":"跟随国风歌单游六都",
+        "PicUrl":"https://z1.muscache.cn/pictures/hongbao/marquee/original/7d85c383-fd27-4168-9ab9-890218822059.jpg"
+      },
+      {
+        "id": "4",
+        "desc":"奇遇杭州",
+        "extra":"西湖荡桨忆童年",
+        "PicUrl":"https://z1.muscache.cn/pictures/hongbao/marquee/original/eb70e28c-2ba9-4dee-b5ac-dbfa9e5029e2.jpg"
+
+      },
+      {
+        "id": "5",
+        "desc":"飞跃赤道过夏天",
+        "extra":"阳光海风温暖亲子时光",
+        "PicUrl":"https://z1.muscache.cn/pictures/hongbao/marquee/original/ca845c98-bb1f-42b2-bc50-95fbb796d697.jpg"
+
+      }
+    ]
+  }
+}

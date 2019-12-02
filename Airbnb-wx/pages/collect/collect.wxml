@@ -1,0 +1,9 @@
+<!--pages/collect/collect.wxml-->
+
+
+<view class="container">
+  <view>
+    <p>1</p>
+    <van-button type="danger">危险按钮</van-button>
+  </view>
+</view>

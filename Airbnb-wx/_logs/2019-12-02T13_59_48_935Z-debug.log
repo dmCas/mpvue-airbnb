@@ -1,0 +1,36 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'json-server' ]
+2 info using npm@6.9.0
+3 info using node@v10.16.3
+4 verbose npm-session d65f488a1d746cea
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData error for json-server@latest request to https://registry.npmjs.org/json-server failed, reason: connect ETIMEDOUT 104.16.25.35:443
+8 timing stage:rollbackFailedOptional Completed in 1ms
+9 timing stage:runTopLevelLifecycles Completed in 315058ms
+10 verbose type system
+11 verbose stack FetchError: request to https://registry.npmjs.org/json-server failed, reason: connect ETIMEDOUT 104.16.25.35:443
+11 verbose stack     at ClientRequest.req.on.err (C:\Program Files\nodejs\node_modules\npm\node_modules\node-fetch-npm\src\index.js:68:14)
+11 verbose stack     at ClientRequest.emit (events.js:198:13)
+11 verbose stack     at TLSSocket.socketErrorListener (_http_client.js:392:9)
+11 verbose stack     at TLSSocket.emit (events.js:198:13)
+11 verbose stack     at emitErrorNT (internal/streams/destroy.js:91:8)
+11 verbose stack     at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
+11 verbose stack     at process._tickCallback (internal/process/next_tick.js:63:19)
+12 verbose cwd E:\Vue-源码实现\Airbnb-wx
+13 verbose Windows_NT 10.0.18362
+14 verbose argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "json-server"
+15 verbose node v10.16.3
+16 verbose npm  v6.9.0
+17 error code ETIMEDOUT
+18 error errno ETIMEDOUT
+19 error network request to https://registry.npmjs.org/json-server failed, reason: connect ETIMEDOUT 104.16.25.35:443
+20 error network This is a problem related to network connectivity.
+20 error network In most cases you are behind a proxy or have bad network settings.
+20 error network
+20 error network If you are behind a proxy, please make sure that the
+20 error network 'proxy' config is set properly.  See: 'npm help config'
+21 verbose exit [ 1, true ]
