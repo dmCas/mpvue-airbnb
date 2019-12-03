@@ -1,4 +1,33 @@
 <!--pages/home/index.wxml-->
 <view class="container">
-  
+    <swiper
+      autoplay="{{true}}"
+      indicator-color="#fff"
+      indicator-active-color="grey"
+      interval="{{interval}}"
+      durantion="{{durantion}}"
+      circular="true"
+      bindchange="currentHandle">
+        <!-- 轮播图 -->
+        <block wx:for="{{ advData }}" wx:for-index="id" wx:for-item="advItem" wx:key="index">
+          <swiper-item>
+            <image class="slide-image" src="{{ advItem.PicUrl }}" width="100%"/>
+            <view class="title">
+              <div class="extra">{{advItem.extra}}</div>
+              <view class="desc">{{advItem.desc}}</view>
+            </view>
+          </swiper-item>  
+        </block>
+    </swiper>
+    <!-- 指示点 -->
+    <view class="swp-dot">
+      <view class="dot m-r {{current === index ? 'active': ''}}" wx:for="{{advData}}" wx:key="index"></view>
+    </view>
+    <view class="search">
+      <view class="search-info">
+        <view class="city"></view>
+        <view class="date"></view>
+        <button>查看房源</button>
+      </view>
+    </view>
 </view>
