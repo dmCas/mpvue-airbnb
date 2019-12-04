@@ -1,0 +1,16 @@
+<!--pages/calendar/index.wxml-->
+<import src="../../template/search"></import>
+<view class="header">
+  <div class="begin">
+    <span>入住日期</span>
+    <span>退房日期</span>
+  </div>
+  <template is="date"></template>
+</view>
+<div class="calendar">
+  <div class="weekday">
+    <ul>
+      <li wx:for="{{weekdays}}" wx:for-index="index">{{item}}</li>
+    </ul>
+  </div>
+</div>

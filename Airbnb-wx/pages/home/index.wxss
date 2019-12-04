@@ -70,7 +70,44 @@ swiper-item image{
   height: 70rpx;
   position: relative;
   margin-bottom: 20rpx;
+
 }
+.search-info .date{
+  color:#218380;
+  display: flex;
+  text-align: center;
+  font-weight: bolder;
+}
+.search-info .date .start{
+  flex: 1;
+}
+.search-info .date .time{
+  flex: 0 0 300rpx;
+  color: black;
+  font-size: 24rpx;
+  position: relative;
+}
+.search-info .date .time::before,
+.search-info .date .time::after{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 40rpx;
+  border-top: 1px solid rgba(7,17,27,.1);
+  top: 28%;
+  height: 1px;
+}
+.search-info .date .time::before{
+  left:30%;
+}
+.search-info .date .time::after{
+  right:30%;
+}
+
+.search-info .date .end{
+  flex: 1;
+}
+
 .search-info .city::after,
 .search-info .date::after{
   display: block;
@@ -83,4 +120,6 @@ swiper-item image{
 }
 button{
   width: 100%;
+  color:white;
+  background-color: #218380;
 }

@@ -1,9 +1,11 @@
 {
   "pages": [
+    "pages/calendar/index",
     "pages/home/index",
     "pages/collect/collect",
     "pages/mine/mine",
     "pages/info/info"
+  
   ],
   "window": {
     "backgroundTextStyle": "light",

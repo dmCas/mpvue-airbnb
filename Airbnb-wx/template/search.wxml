@@ -1,0 +1,8 @@
+<template name="date">
+  <view class="date">
+    <span class="start">12月4日</span>
+    <span class="time">1晚</span>
+    <span class="end">12月5日</span>
+  </view>
+</template>
+

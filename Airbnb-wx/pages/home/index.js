@@ -28,24 +28,24 @@ Page({
     })
   },
   //获取用户地理位置
-  getLocation(){
-    console.log(1)
-    wx.getLocation({
-      type: 'wgs84',
-      altitude: true,
-      success: (res) => {
-        const latitude = res.latitude
-        const longitude = res.longitude
-        console.log(res)
-        this.setData({
-          latitude,
-          longitude
-        })
-      },
-      fail: () => {},
-      complete: () => {}
-    });
-  },
+  // getLocation(){
+  //   console.log(1)
+  //   wx.getLocation({
+  //     type: 'wgs84',
+  //     altitude: true,
+  //     success: (res) => {
+  //       const latitude = res.latitude
+  //       const longitude = res.longitude
+  //       console.log(res)
+  //       this.setData({
+  //         latitude,
+  //         longitude
+  //       })
+  //     },
+  //     fail: () => {},
+  //     complete: () => {}
+  //   });
+  // },
  
   /**
    * 生命周期函数--监听页面加载

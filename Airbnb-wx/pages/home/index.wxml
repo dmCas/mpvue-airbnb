@@ -1,4 +1,5 @@
 <!--pages/home/index.wxml-->
+<import src="../../template/search"></import>
 <view class="container">
     <swiper
       autoplay="{{true}}"
@@ -26,8 +27,15 @@
     <view class="search">
       <view class="search-info">
         <view class="city"></view>
-        <view class="date"></view>
-        <button>查看房源</button>
+        <navigator class="" target="" url="../calendar/index" hover-class="navigator-hover" open-type="navigate">
+          <!-- <view class="date">
+            <span class="start">12月4日</span>
+            <span class="time">1晚</span>
+            <span class="end">12月5日</span>
+          </view> -->
+          <template is="date"/>
+        </navigator>
+        <button>查找房源</button>
       </view>
     </view>
 </view>
