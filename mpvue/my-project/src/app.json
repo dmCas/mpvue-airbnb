@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/home/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Airbnb爱彼迎民宿预定",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "backgroundColor": "#fafafa",
+    "selectedColor": "#333",
+    "borderStyle": "white",
+
+    "list": [ {
+      "pagePath": "pages/home/main",
+      "iconPath": "static/images/Airbnb.png",
+      "selectedIconPath": "static/images/icon_selected (3).png",
+      "text": "首页"
+      }, 
+      {
+        "pagePath": "pages/home/main",
+        "iconPath": "static/images/收藏 .png",
+        "selectedIconPath": "static/images/icon_selected (4).png",
+        "text": "收藏"
+      },
+      {
+        "pagePath": "pages/home/main",
+        "iconPath": "static/images/消息.png",
+        "selectedIconPath": "static/images/icon_selected (1).png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/home/main",
+        "iconPath": "static/images/我的.png",
+        "selectedIconPath": "static/images/icon_selected (2).png",
+        "text": "我的"
+      }],
+    "position": "bottom"
+  }
+}

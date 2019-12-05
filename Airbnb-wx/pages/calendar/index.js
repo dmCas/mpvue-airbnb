@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    weekdays:['日', '一', '二', '三', '四', '五','六']
+    weekdays:['日', '一', '二', '三', '四', '五','六'],
+    year: 0,
+    month: 0,
+    dateArr: []
   },
 
   /**
@@ -15,6 +18,15 @@ Page({
     wx.setNavigationBarTitle({
         title:'选择日期'
      })
+    let now = new Date()
+    //拿到当前月份
+    let year = now.getFullYear()
+    let month = now.getMonth() + 1
+    this.setDate({
+      year,
+      month
+    })
+
   },
 
   /**

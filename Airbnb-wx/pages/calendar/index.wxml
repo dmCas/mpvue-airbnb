@@ -10,7 +10,7 @@
 <div class="calendar">
   <div class="weekday">
     <ul>
-      <li wx:for="{{weekdays}}" wx:for-index="index">{{item}}</li>
+      <li wx:for="{{weekdays}}" wx:for-index="index" wx:key="index">{{item}}</li>
     </ul>
   </div>
 </div>
