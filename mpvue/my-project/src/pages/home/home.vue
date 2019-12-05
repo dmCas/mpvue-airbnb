@@ -4,7 +4,7 @@
     autoplay="true"
     indicator-color="#fff"
     indicator-active-color="grey"
-    interval="5000"
+    interval="4000"
     circular="true"
     duration="500"
     @change="currentHandle($event)">
@@ -21,21 +21,22 @@
   <div class="swp-dot">
     <div :class="current === index?'dot m-r active': 'dot m-r '" v-for="(item,index) in advData" :key="index"></div>
   </div>
+  <v-search></v-search>
 </div>
 </template>
 
 <script>
 import fly from '@/utils/flyios'
-import swiper from '@/components/swiper/swiper.vue'
+import search from '@/components/search/search.vue'
 export default {
   data(){
     return {
       advData: [],
-      // current:0
+      current:0
     }
   },
-  compoents: {
-    'v-swiper': swiper
+  components: {
+    'v-search': search
   },
   methods: {
     getData(){
@@ -49,7 +50,7 @@ export default {
       })
     },
     currentHandle(event){      
-      console.log(123)
+      this.current = event.mp.detail.current
     },
   },
   created(){
