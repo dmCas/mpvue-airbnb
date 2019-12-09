@@ -1,0 +1,1 @@
+export const CUR_Month = 'CUR_Month' // 当前月
