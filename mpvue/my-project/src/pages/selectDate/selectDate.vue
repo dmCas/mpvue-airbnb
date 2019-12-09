@@ -146,7 +146,7 @@ export default {
   /* border-top: 1px solid rgba(7, 17, 27, 0.1);  */
   width: 100%;
   /* height:200rpx; */
-  padding: 50rpx 40rpx;
+  padding: 26rpx 40rpx;
   display: flex;
   bottom: 0;
   justify-items: center;
