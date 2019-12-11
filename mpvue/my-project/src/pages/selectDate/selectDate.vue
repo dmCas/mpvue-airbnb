@@ -6,9 +6,9 @@
         <span>退房日期</span>
       </div>
       <div class="date">
-        <span class="start">{{currentMonth}}月{{currentDay}}日</span>
+        <span class="start">{{currentMonth}}月{{startDay}}日</span>
         <span class="time">1晚</span>
-        <span class="end">{{currentMonth}}月{{currentDay+1}}日</span>
+        <span class="end">{{currentMonth}}月{{endDay}}日</span>
       </div>
     </div>
     <div class="calendar">
@@ -20,9 +20,9 @@
       <v-calendar></v-calendar>
     </div>
     <div class="handle">
-      <span class="clear">清空日期</span>
+      <span class="clear" @click="clearChoose">清空日期</span>
       <div class="display"></div>
-      <button class="save">保存</button>
+      <button class="save" @click="saveChoose">保存</button>
     </div>
   </div>
 </template>
@@ -41,34 +41,39 @@ export default {
     "v-search": search,
     "v-calendar":calendar
   },
+  
   data() {
     return {
       weekdays: ["日", "一", "二", "三", "四", "五", "六"]
     }
   },
   computed: {
-    ...mapState([
-      'currentMonth'
-    ]),
     ...mapGetters([
       'currentDay',
-      'currentMonth'
+      'currentMonth',
+      'startDay',
+      'endDay'
     ])
   },
   methods: {
     ...mapActions([
-      'getCurMon'
-    ])
-  },
-  created(){
-    this.getCurMon()
+      'getCurMon',
+      'clearChoose'
+    ]),
+    saveChoose(){
+      console.log(123);
+      const url = "../home/main.js";
+      wx.navigateBack({
+        url
+      })
+    }
   }
 };
 </script>
 
 <style>
 .header {
-  padding: 40rpx 50rpx;
+  padding: 30rpx 50rpx;
 }
 .header .begin {
   /* padding: 0rpx 30rpx; */

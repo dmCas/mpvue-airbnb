@@ -8,8 +8,14 @@
     <!-- 日期展示 -->
     <div class="calender-main">
       <div class="each-block" v-for="(item,index) in content" :key="index" 
-      :class="item < currentDay?'pass':''"
-      >{{item}}</div>
+       @click="setStartEnd(item)" :data-target='item'>
+        <div class="block-styel"
+        :class="{'pass':item < currentDay, 'defalut':item==currentDay,'select':item==temStartDay||item==temEndDay,
+        'select':temStartDay < item && item <temEndDay
+        }" >
+          {{item}}
+        </div>
+    </div>
     </div>
   </div>
 </template>
@@ -27,22 +33,30 @@ export default {
       "currentDay",
       "currentMonth",
       "currentFirstDay",
-      "currentDayNum"
+      "currentDayNum",
+      "startDay",
+      "endDay",
+      "temStartDay",
+      'temEndDay'
     ]),
     curStatus(item){
       let that =this
-      console.log(item)
+      // console.log(item)
       if(item == this.currentDay){
         return 'select'
       }
       else{
-        console.log(123)
+        // console.log(123)
         return 'pass'
       }
     }
   },
   methods: {
-    ...mapActions(["getCurMon"]),
+    ...mapActions(
+      [
+        "getCurMon",
+        "setStartEnd"
+      ]),
     empty() {
       if (this.currentFirstDay > 0) {
         for (let i = 0; i < this.currentFirstDay; i++) {
@@ -52,16 +66,24 @@ export default {
       for (let j = 1; j <= this.currentDayNum; j++) {
         this.content.push(j);
       }
-      console.log(this.content);
+      // console.log(this.content);
+    },
+    setTarget(e){
+      console.log(e)
     }
   },
   created() {
     this.getCurMon(), this.empty();
-  }
+  },
 };
 </script>
 
 <style>
+*{
+  padding: 0;
+  margin: 0;
+  border: none;
+}
 .calender-header {
   padding: 40rpx 30rpx;
 }
@@ -74,20 +96,37 @@ export default {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
+  align-content: flex-start;
+  box-sizing: border-box;
 }
-.calender-main .select{
+.calender-main .each-block .select{
   background-color: #218380;
   border-radius: 50%;
   color:white;
+  border:none;
 }
-.calender-main .pass{
+.calender-main .each-block .choose{
+  background-color: #218380;
+  color:white;
+}
+.calender-main .each-block .defalut{
+  border-radius: 50%;
+  border: .5px solid lightgray;
+  box-sizing: border-box;
+}
+.calender-main .each-block .pass{
   color: lightgray;
+  pointer-events: none !important;
+}
+.block-styel{
+  padding: 20rpx 20rpx;
+  box-sizing: border-box;
 }
 .each-block {
-  width: 100rpx;
-  height:100rpx;
-  max-width:100rpx;
-  max-height:100rpx;
+  width: 102rpx;
+  height:102rpx;
+  max-width:102rpx;
+  max-height:102rpx;
   margin-bottom: 20rpx;
   font-size: 15px;
   display: flex;

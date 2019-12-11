@@ -4,9 +4,9 @@
       <div class="city"></div>
       <div>
         <div class="date" @click="chooseDate">
-          <span class="start">{{currentDay}}月{{nowTimes.curDay}}日</span>
+          <span class="start">{{currentMonth}}月{{startDay}}日</span>
           <span class="time">1晚</span>
-          <span class="end">{{currentDay}}月{{nowTimes.curDay+1}}日</span>
+          <span class="end">{{currentMonth}}月{{endDay}}日</span>
         </div>
         <!-- <template is="date"/> -->
       </div>
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import {mapState,mapGetters} from 'vuex'
+import {mapState,mapGetters,mapActions} from 'vuex'
 export default {
   data() {
     return {
@@ -35,6 +35,10 @@ export default {
         url
       });
     },
+    ...mapActions(
+      [
+        "getCurMon"
+      ]),
     setNowTimes() {
       let today = new Date();
       this.nowTimes.curMon = today.getMonth() + 1 
@@ -47,7 +51,10 @@ export default {
       'currentMonth'
     ]),
     ...mapGetters([
-      'currentDay'
+      'currentDay',
+      'currentMonth',
+      'startDay',
+      'endDay'
     ])
   },
   mounted() {
@@ -55,6 +62,9 @@ export default {
       this.setNowTimes();
     }, 1000);
     clearInterval()
+  },
+  created(){
+    this.getCurMon()
   }
 };
 </script>
