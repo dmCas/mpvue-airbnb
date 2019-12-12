@@ -43,7 +43,7 @@ export default {
       let today = new Date();
       this.nowTimes.curMon = today.getMonth() + 1 
       this.nowTimes.curDay = today.getDate()
-      console.log(today.getMonth())
+      // console.log(today.getMonth())
     }
   },
   computed: {

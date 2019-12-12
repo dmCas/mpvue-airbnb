@@ -10,6 +10,7 @@ const state = {
   currentFirstDay:null,
   startDay:null,
   endDay:null,
+  //设置当前选中的次数，默认是两次为默认值
   count:2,
   //暂存时间 用来过度时间选择
   temStartDay:null,
@@ -48,7 +49,8 @@ const mutations = {
       // console.log(state.count)
     }
     else{
-      if(day<state.startDay){
+      //防止出现入住日期大于退房日期的情况
+      if(day<state.temStartDay){
         state.temStartDay = day
         // state.startDay = day
         state.count = 1
