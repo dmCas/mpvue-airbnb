@@ -78,27 +78,27 @@ const mutations = {
     }
     console.log(state.content)
   },
-  [types.SET_START_END](state, day, month) {
-    console.log(day)
-    console.log(month)
-    if (day < state.currentDay) {
+  [types.SET_START_END](state, val) {
+    console.log(val.month)
+    console.log(val.day)
+    if (val.day < state.currentDay) {
       return false
     }
     if (state.count != 1) {
-      state.temStartDay = day
+      state.temStartDay = val.day
       // state.startDay = day
       state.temEndDay = ''
       state.count = 1
     }
     else {
       //防止出现入住日期大于退房日期的情况
-      if (day < state.temStartDay) {
-        state.temStartDay = day
+      if (val.day < state.temStartDay) {
+        state.temStartDay = val.day
         // state.startDay = day
         state.count = 1
       }
       else {
-        state.temEndDay = day
+        state.temEndDay = val.day
         state.startDay = state.temStartDay
         state.endDay = state.temEndDay
         state.count = 2
@@ -119,8 +119,8 @@ const actions = {
   getCurMon({ commit }) {
     commit(types.CUR_Month)
   },
-  setStartEnd({ commit }, day) {
-    commit(types.SET_START_END, day)
+  setStartEnd({ commit }, value) {
+    commit(types.SET_START_END, value)
   },
   clearChoose({ commit }) {
     commit(types.CLEAR_CHOOSE)
