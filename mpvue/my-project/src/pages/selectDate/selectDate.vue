@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="selectDate">
     <div class="header">
       <div class="begin">
         <span>入住日期</span>
@@ -72,6 +72,14 @@ export default {
 </script>
 
 <style>
+*{
+  margin: 0;
+  padding: 0;
+}
+.selectDate{
+  height: 100vh;
+  width: 100%;
+}
 .header {
   padding: 30rpx 50rpx;
 }
@@ -125,7 +133,7 @@ export default {
   text-align: right;
 }
 .calendar {
-  padding: 65rpx 20rpx 0rpx;
+  padding: 35rpx 24rpx 35rpx;
 }
 /* .calendar .weekday{
   padding: 0 300rpx;
@@ -147,18 +155,20 @@ export default {
   content: " ";
 }
 .handle{
-  position: fixed;
+  /* position: fixed; */
   /* border-top: 1px solid rgba(7, 17, 27, 0.1);  */
   width: 100%;
   /* height:200rpx; */
   padding: 26rpx 40rpx;
-  display: flex;
+  background-color: white;
+  position: absolute;
   bottom: 0;
   justify-items: center;
   box-shadow: 0 1px 6px rgba(7, 17, 27, 0.1);
-  /* display: flex; */
-  overflow: hidden;
+  display: flex;
+  /* overflow: hidden; */
   box-sizing: border-box;
+  z-index: 999;
 }
 .handle .clear{
   flex: 1;
@@ -170,8 +180,8 @@ export default {
 }
 .handle .save{
   flex: 1;
-}
-.handle button{
   padding: 10rpx 10rpx;
+  background-color: #218380;
+  color: white;
 }
 </style>

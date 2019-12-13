@@ -137,7 +137,7 @@ export default {
   border-top: 1px solid rgba(7, 17, 27, 0.1);
   content: " ";
 }
-button {
+.search-info button {
   width: 100%;
   color: white;
   background-color: #218380;
