@@ -4,9 +4,9 @@
       <div class="city"></div>
       <div>
         <div class="date" @click="chooseDate">
-          <span class="start">{{currentMonth}}月{{startDay}}日</span>
-          <span class="time">1晚</span>
-          <span class="end">{{currentMonth}}月{{endDay}}日</span>
+          <span class="start">{{startDay}}</span>
+          <span class="time">{{livingTime}}晚</span>
+          <span class="end">{{endDay}}</span>
         </div>
         <!-- <template is="date"/> -->
       </div>
@@ -54,7 +54,8 @@ export default {
       'currentDay',
       'currentMonth',
       'startDay',
-      'endDay'
+      'endDay',
+      'livingTime'
     ])
   },
   mounted() {

@@ -14,13 +14,21 @@ const state = {
   count: 2,
   //暂存时间 用来过度时间选择
   temStartDay: null,
+  temStartMonth:null,
+  temStartYear:null,
   temEndDay: null,
+  temEndMonth: null,
+  temEndYear: null,
   //存放一年的年月
   nextYear : [],
   eachMonthDays : [],
   //每个月的第一天是星期几
   eachMonthFirstDay : [],
-  content : []
+  content : [],
+  //居住时长
+  livingTime: 1,
+  startComplete:null,
+  endComplete:null
 }
 
 const mutations = {
@@ -28,15 +36,16 @@ const mutations = {
     var date = new Date()
     //当前月份
     state.currentDay = date.getDate()
-    //默认开始为当前日期
-    state.startDay = date.getDate()
-    //默认结束为第二天
-    state.endDay = date.getDate() + 1
+   
     state.temStartDay = date.getDate()
     //默认结束为第二天
     state.temEndDay = date.getDate() + 1
     state.currentMonth = date.getMonth() + 1
     state.currentYear = date.getFullYear()
+     //默认开始为当前日期
+     state.startDay = state.currentMonth + '月' +state.currentDay +'日'
+     //默认结束为第二天
+     state.endDay = state.currentMonth + '月' + (state.currentDay+1) +'日'
     //当前月份的天数
     state.currentDayNum = new Date(state.currentYear, state.currentMonth, 0).getDate();
     //获取第一天的周几
@@ -79,29 +88,46 @@ const mutations = {
     console.log(state.content)
   },
   [types.SET_START_END](state, val) {
-    console.log(val.month)
-    console.log(val.day)
-    if (val.day < state.currentDay) {
+    if (val.day < state.currentDay && state.currentMonth == val.month && state.currentYear == val.year) {
       return false
     }
     if (state.count != 1) {
       state.temStartDay = val.day
+      state.temStartMon = val.month
+      state.temStartYear = val.year
       // state.startDay = day
       state.temEndDay = ''
       state.count = 1
+      state.startComplete = val.year + '/' + val.month + '/' + val.day
     }
     else {
       //防止出现入住日期大于退房日期的情况
-      if (val.day < state.temStartDay) {
+      if (val.year < state.temStartYear || (val.year==state.temStartYear&&val.month<state.temStartMon||
+        val.year==state.temStartYear&&val.month==state.temStartMon&&val.day<state.temStartDay)) {
+        //重置以上数据
         state.temStartDay = val.day
+        state.temStartMon = val.month
+        state.temStartYear = val.year
         // state.startDay = day
         state.count = 1
+        state.startComplete = val.year + '/' + val.month + '/' + val.day
       }
       else {
         state.temEndDay = val.day
-        state.startDay = state.temStartDay
-        state.endDay = state.temEndDay
+        state.temEndMonth = val.month
+        state.temEndYear = val.year
+        //重新设置入住日期、退房日期
+        state.startDay = state.temStartMon + '月' + state.temStartDay + '日'
+        state.endDay = state.temEndMonth + '月' + state.temEndDay + '日'
         state.count = 2
+        // state.livingTime = state.endDay - state.startDay
+        state.endComplete = val.year + '/' + val.month + '/' + val.day
+        console.log("第二次点击")
+        var  a = new Date(state.startComplete)
+        var b = new Date(state.endComplete)
+        var day = b.getTime() - a.getTime()
+        // console.log(parseInt(day / (1000 * 60 * 60 * 24)))
+        state.livingTime = parseInt((day) / (1000 * 60 * 60 * 24))
       }
 
       // console.log(state.count)
@@ -142,12 +168,17 @@ const getters = {
   startDay: state => state.startDay,
   endDay: state => state.endDay,
   temStartDay: state => state.temStartDay,
+  temStartMonth: state => state.temStartMon,
+  temStartYear:state=> state.temStartYear,
   temEndDay: state => state.temEndDay,
+  temEndMonth: state => state.temEndMonth,
+  temEndYear: state => state.temEndYear,
   nextyear : state => state.nextYear,
   eachMonthDays : state => state.eachMonthDays,
   //每个月的第一天是星期几
   eachMonthFirstDay : state => state.eachMonthFirstDay,
   content:state => state.content,
+  livingTime: state => state.livingTime
 }
 
 

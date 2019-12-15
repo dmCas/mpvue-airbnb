@@ -12,7 +12,7 @@
           class="each-block"
           v-for="(item,index) in content[mNm]"
           :key="index"
-          @click="TS(item,nextyear[mNm].month)"
+          @click="TS(item,nextyear[mNm].month,nextyear[mNm].year)"
         >
           <div
             class="block-styel"
@@ -20,7 +20,8 @@
             'pass':item < currentDay && nextyear[mNm].month === currentMonth , 
             'defalut':item==currentDay && nextyear[mNm].month === currentMonth, 
             'select':(item==temStartDay ||item==temEndDay) && nextyear[mNm].month === currentMonth,
-            'select':temStartDay < item && item < temEndDay
+            'select':(temStartDay < item && temStartMon == nextyear[mNm].month && temEndYear == nextyear[mNm].month) 
+            
             }"
           >{{item}}</div>
         </div>
@@ -46,7 +47,11 @@ export default {
       "startDay",
       "endDay",
       "temStartDay",
+      "temStartMonth",
+      "temStartYear",
       "temEndDay",
+      "temEndMonth",
+      "temEndYear",
       "content",
       "nextyear",
       "currentYear"
@@ -78,8 +83,8 @@ export default {
     setTarget(e) {
       console.log(e);
     },
-    TS(day,month){
-      this.setStartEnd({"day":day,"month":month})
+    TS(day,month,year){
+      this.setStartEnd({"day":day,"month":month,"year":year})
     }
 },
   created() {
