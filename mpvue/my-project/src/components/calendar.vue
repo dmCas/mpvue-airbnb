@@ -19,9 +19,12 @@
             :class="{
             'pass':item < currentDay && nextyear[mNm].month === currentMonth , 
             'defalut':item==currentDay && nextyear[mNm].month === currentMonth, 
-            'select':(item==temStartDay ||item==temEndDay) && nextyear[mNm].month === currentMonth,
-            'select':(temStartDay < item && temStartMon == nextyear[mNm].month && temEndYear == nextyear[mNm].month) 
-            
+            'select':((item==temStartDay && nextyear[mNm].year == temStartYear&& nextyear[mNm].month==temStartMonth )
+            ||(item==temEndDay && nextyear[mNm].year == temEndYear&& nextyear[mNm].month==temEndMonth )),
+            'select':((temStartYear*10000)+(temStartMonth*100)+(temStartDay)
+            <=(nextyear[mNm].year*10000) +(nextyear[mNm].month*100) +item
+            && (nextyear[mNm].year*10000) +(nextyear[mNm].month*100) +item
+            <=(temEndYear*10000)+(temEndMonth*100)+(temEndDay))
             }"
           >{{item}}</div>
         </div>

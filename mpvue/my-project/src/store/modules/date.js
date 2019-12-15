@@ -37,11 +37,18 @@ const mutations = {
     //当前月份
     state.currentDay = date.getDate()
    
-    state.temStartDay = date.getDate()
-    //默认结束为第二天
-    state.temEndDay = date.getDate() + 1
+    
+    // 默认结束为第二天
+    
     state.currentMonth = date.getMonth() + 1
     state.currentYear = date.getFullYear()
+    state.temStartDay = date.getDate()
+    state.temStartMonth = state.currentMonth
+    state.temStartYear = state.currentYear
+    state.temEndDay = date.getDate() + 1
+    state.temEndMonth = state.currentMonth
+    state.temEndYear = state.currentYear
+ 
      //默认开始为当前日期
      state.startDay = state.currentMonth + '月' +state.currentDay +'日'
      //默认结束为第二天
@@ -88,26 +95,33 @@ const mutations = {
     console.log(state.content)
   },
   [types.SET_START_END](state, val) {
-    if (val.day < state.currentDay && state.currentMonth == val.month && state.currentYear == val.year) {
+    console.log(val.day)
+    console.log(val.year + '-' + val.month + '-' + val.day )
+    if ((val.day < state.currentDay && state.currentMonth == val.month && state.currentYear == val.year)||val.day==' ') {
       return false
     }
     if (state.count != 1) {
       state.temStartDay = val.day
-      state.temStartMon = val.month
+      state.temStartMonth = val.month
       state.temStartYear = val.year
-      // state.startDay = day
       state.temEndDay = ''
+      state.temEndMonth = ''
+      state.temEndYear = ''
+      // state.startDay = day
       state.count = 1
       state.startComplete = val.year + '/' + val.month + '/' + val.day
     }
     else {
       //防止出现入住日期大于退房日期的情况
-      if (val.year < state.temStartYear || (val.year==state.temStartYear&&val.month<state.temStartMon||
-        val.year==state.temStartYear&&val.month==state.temStartMon&&val.day<state.temStartDay)) {
+      if (val.year < state.temStartYear || (val.year==state.temStartYear&&val.month<state.temStartMonth||
+        val.year==state.temStartYear&&val.month==state.temStartMonth&&val.day<state.temStartDay)) {
         //重置以上数据
         state.temStartDay = val.day
-        state.temStartMon = val.month
+        state.temStartMonth = val.month
         state.temStartYear = val.year
+        state.temEndDay = ''
+        state.temEndMonth = ''
+        state.temEndYear = ''
         // state.startDay = day
         state.count = 1
         state.startComplete = val.year + '/' + val.month + '/' + val.day
@@ -117,7 +131,7 @@ const mutations = {
         state.temEndMonth = val.month
         state.temEndYear = val.year
         //重新设置入住日期、退房日期
-        state.startDay = state.temStartMon + '月' + state.temStartDay + '日'
+        state.startDay = state.temStartMonth + '月' + state.temStartDay + '日'
         state.endDay = state.temEndMonth + '月' + state.temEndDay + '日'
         state.count = 2
         // state.livingTime = state.endDay - state.startDay
@@ -168,7 +182,7 @@ const getters = {
   startDay: state => state.startDay,
   endDay: state => state.endDay,
   temStartDay: state => state.temStartDay,
-  temStartMonth: state => state.temStartMon,
+  temStartMonth: state => state.temStartMonth,
   temStartYear:state=> state.temStartYear,
   temEndDay: state => state.temEndDay,
   temEndMonth: state => state.temEndMonth,
