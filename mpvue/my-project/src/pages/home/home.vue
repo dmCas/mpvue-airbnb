@@ -22,28 +22,46 @@
     <div :class="current === index?'dot m-r active': 'dot m-r '" v-for="(item,index) in advData" :key="index"></div>
   </div>
   <v-search></v-search>
+  <!-- 推广广告 -->
+  <div class="generalize">
+    <div class="text">
+      <p class="big">想要的团聚</p>
+      <p class="small">都在爱彼迎</p>
+    </div>
+    <img :src="showMain[0].PicUrl" alt="">
+    <div class="btn">
+      <button>{{showMain[0].desc}}</button>
+    </div>
+  </div>
+  <!-- 冬季特惠 -->
+  <v-preference :preference="preference"></v-preference>
 </div>
 </template>
 
 <script>
 import fly from '@/utils/flyios'
-import search from '@/components/search/search.vue'
+import search from '@/components/search.vue'
+import preference from '@/components/preference.vue'
 export default {
   data(){
     return {
       advData: [],
-      current:0
+      current:0,
+      showMain:[],
+      preference:[]
     }
   },
   components: {
-    'v-search': search
+    'v-search': search,
+    'v-preference':preference
   },
   methods: {
     getData(){
       fly.get('')
       .then(res =>{
         this.advData = res.data.advertise
-        console.log(this.advData)
+        this.showMain = res.data.generalize
+        this.preference = res.data.preference
       })
       .catch(e => {
         console.log(e);
@@ -113,5 +131,49 @@ swiper-item image{
   background-color: white;
   width: 36rpx;
   transition: background-color 3s linear;
+}
+.generalize{
+  width: 90%;
+  height: 325rpx;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  position: relative;
+  background-color: #fff;
+  border-radius: 30rpx;
+  margin-bottom: 50rpx;
+}
+.generalize .text{
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  padding-top: 25rpx;
+}
+.generalize .text .big{
+  font-size: 50rpx;
+  color: white;
+  margin-bottom: 10rpx;
+  letter-spacing: 5rpx;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.generalize .text .small{
+  font-size: 30rpx;
+  color: white;
+  letter-spacing: 10rpx;
+}
+.generalize img{
+  width: 100%;
+  height: 100%;
+  border-radius: 30rpx;
+}
+.generalize .btn{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 40rpx;
+}
+.generalize .btn button{
+  padding: 10rpx 20rpx;
+  background-color: #e94e77;
+  color: white;
 }
 </style>

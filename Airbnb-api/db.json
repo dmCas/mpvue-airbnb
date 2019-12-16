@@ -31,7 +31,159 @@
         "desc":"飞跃赤道过夏天",
         "extra":"阳光海风温暖亲子时光",
         "PicUrl":"https://z1.muscache.cn/pictures/hongbao/marquee/original/ca845c98-bb1f-42b2-bc50-95fbb796d697.jpg"
-
+      }
+    ],
+    "generalize":[
+      {
+        "id": "6",
+        "desc":"领取千元团聚礼包",
+        "PicUrl":"https://z1.muscache.cn/pictures/hongbao/marquee/original/79c5a480-54b3-4acd-a5da-141272a67564.jpg"
+      }
+    ],
+    "preference":[
+      {
+        "city":"苏州",
+        "cityId":"1",
+        "house":[
+          {
+            "houseId":"1",
+            "housePositon":"近平江/山塘/苏州站/苏州北站/拙政园/苏州博物馆+地铁口旁【书生】",
+            "type":"整套公寓 · 1张床",
+            "OldPrice":"238",
+            "NewPrice":"190",
+            "Rating":"4.8",
+            "comments":"44",
+            "price":"超赞房东",
+            "showPic":"https://z1.muscache.cn/im/pictures/72c59b2e-92e1-479c-8a6e-c6fa2bf8ac23.jpg?aki_policy=large"
+          },
+          {
+            "houseId":"2",
+            "housePositon":"【都市】近苏州站/平江/山塘/苏州博物馆/观前街/拙政园/山塘街/留园+近地铁口",
+            "type":"整套公寓 · 1张床",
+            "OldPrice":"189",
+            "NewPrice":"151",
+            "Rating":"4.9",
+            "comments":"35",
+            "price":"超赞房东",
+            "showPic":"https://z1.muscache.cn/im/pictures/7902eaa6-bdb6-40a6-8c43-15272a5d8f98.jpg?aki_policy=large"
+          },
+          {
+            "houseId":"3",
+            "housePositon":"「Time·清新Home」苏州站北站万达/诚品·地铁·观前·拙政园/高端公寓/温暖阳光超高观景",
+            "type":"整套公寓 · 1张床",
+            "OldPrice":"168",
+            "NewPrice":"151",
+            "Rating":"4.6",
+            "comments":"45",
+            "price":"超赞房东",
+            "showPic":"https://z1.muscache.cn/im/pictures/5694ec03-104c-4f83-866d-3d6e0dafd51d.jpg?aki_policy=large"
+          },
+          {
+            "houseId":"4",
+            "housePositon":"【埃文居·钮】紧邻平江路拙政园观前街苏大 火车站一号线地铁口 ins温馨北欧家庭影院阁楼院",
+            "type":"整套房子 · 1张床",
+            "OldPrice":"168",
+            "NewPrice":"143",
+            "Rating":"4.2",
+            "comments":"45",
+            "price":"超赞房东",
+            "showPic":"https://z1.muscache.cn/im/pictures/5b4204f5-86de-4eb7-9e0f-c824a14201b4.jpg?aki_policy=large"
+          },
+          {
+            "houseId":"5",
+            "housePositon":"a「寻宿」阑珊 紧邻苏州火车站 地铁口 平江路 狮子林 极佳视野",
+            "type":"整套公寓 · 1张床",
+            "OldPrice":"158",
+            "NewPrice":"134",
+            "Rating":"4.2",
+            "comments":"41",
+            "price":"超赞房东",
+            "showPic":"https://z1.muscache.cn/im/pictures/a10acc7a-feb6-4016-97d5-6f50e476d7f6.jpg?aki_policy=large"
+          },
+          {
+            "houseId":"5",
+            "housePositon":"【埃文居·范】小而温馨 紧邻地铁口 平江路/拙政园/苏博/火车站/山塘街/狮子林",
+            "type":"整套公寓 · 1张床",
+            "OldPrice":"108",
+            "NewPrice":"92",
+            "Rating":"4.1",
+            "comments":"12",
+            "price":"绝对好房",
+            "showPic":"https://z1.muscache.cn/im/pictures/0fe4bef8-2e12-4c13-8d08-509cb1d655d3.jpg?aki_policy=large"
+          }
+        ]
+      },
+      {
+        "city":"上海",
+        "cityId":"2",
+        "house":[
+          {
+            "houseId":"1",
+            "housePositon":"近平江/山塘/苏州站/苏州北站/拙政园/苏州博物馆+地铁口旁【书生】",
+            "type":"整套公寓 · 1张床",
+            "OldPrice":"238",
+            "NewPrice":"190",
+            "Rating":"4.8",
+            "comments":"44",
+            "price":"超赞房东",
+            "showPic":"https://z1.muscache.cn/im/pictures/72c59b2e-92e1-479c-8a6e-c6fa2bf8ac23.jpg?aki_policy=large"
+          },
+          {
+            "houseId":"2",
+            "housePositon":"【都市】近苏州站/平江/山塘/苏州博物馆/观前街/拙政园/山塘街/留园+近地铁口",
+            "type":"整套公寓 · 1张床",
+            "OldPrice":"189",
+            "NewPrice":"151",
+            "Rating":"4.9",
+            "comments":"35",
+            "price":"超赞房东",
+            "showPic":"https://z1.muscache.cn/im/pictures/7902eaa6-bdb6-40a6-8c43-15272a5d8f98.jpg?aki_policy=large"
+          },
+          {
+            "houseId":"3",
+            "housePositon":"「Time·清新Home」苏州站北站万达/诚品·地铁·观前·拙政园/高端公寓/温暖阳光超高观景",
+            "type":"整套公寓 · 1张床",
+            "OldPrice":"168",
+            "NewPrice":"151",
+            "Rating":"4.6",
+            "comments":"45",
+            "price":"超赞房东",
+            "showPic":"https://z1.muscache.cn/im/pictures/5694ec03-104c-4f83-866d-3d6e0dafd51d.jpg?aki_policy=large"
+          },
+          {
+            "houseId":"4",
+            "housePositon":"【埃文居·钮】紧邻平江路拙政园观前街苏大 火车站一号线地铁口 ins温馨北欧家庭影院阁楼院",
+            "type":"整套房子 · 1张床",
+            "OldPrice":"168",
+            "NewPrice":"143",
+            "Rating":"4.2",
+            "comments":"45",
+            "price":"超赞房东",
+            "showPic":"https://z1.muscache.cn/im/pictures/5b4204f5-86de-4eb7-9e0f-c824a14201b4.jpg?aki_policy=large"
+          },
+          {
+            "houseId":"5",
+            "housePositon":"a「寻宿」阑珊 紧邻苏州火车站 地铁口 平江路 狮子林 极佳视野",
+            "type":"整套公寓 · 1张床",
+            "OldPrice":"158",
+            "NewPrice":"134",
+            "Rating":"4.2",
+            "comments":"41",
+            "price":"超赞房东",
+            "showPic":"https://z1.muscache.cn/im/pictures/a10acc7a-feb6-4016-97d5-6f50e476d7f6.jpg?aki_policy=large"
+          },
+          {
+            "houseId":"5",
+            "housePositon":"【埃文居·范】小而温馨 紧邻地铁口 平江路/拙政园/苏博/火车站/山塘街/狮子林",
+            "type":"整套公寓 · 1张床",
+            "OldPrice":"108",
+            "NewPrice":"92",
+            "Rating":"4.1",
+            "comments":"12",
+            "price":"绝对好房",
+            "showPic":"https://z1.muscache.cn/im/pictures/0fe4bef8-2e12-4c13-8d08-509cb1d655d3.jpg?aki_policy=large"
+          }
+        ]
       }
     ]
   }

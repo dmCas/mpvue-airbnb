@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import search from "@/components/search/search.vue";
+import search from "@/components/search.vue";
 import calendar from '@/components/calendar.vue'
 import {mapState, mapGetters, mapMutations, mapActions} from 'vuex'
 export default {
