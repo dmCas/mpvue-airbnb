@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/houseMain/main",
     "pages/home/main",
     "pages/selectDate/main",
-
     "pages/mine/main"
   ],
   "window": {

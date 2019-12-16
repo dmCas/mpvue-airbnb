@@ -1,7 +1,7 @@
 <template>
   <div class="search">
     <div class="search-info">
-      <div class="city"></div>
+      <div class="city"><input type="text"  placeholder="输入目的地、城市或景点"></div>
       <div>
         <div class="date" @click="chooseDate">
           <span class="start">{{startDay}}</span>
