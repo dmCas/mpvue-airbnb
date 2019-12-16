@@ -15,7 +15,6 @@
           @click="TS(item,nextyear[mNm].month,nextyear[mNm].year)"
         >
           <div
-            class="block-styel"
             :class="{
             'pass':item < currentDay && nextyear[mNm].month === currentMonth , 
             'defalut':item==currentDay && nextyear[mNm].month === currentMonth, 
@@ -24,7 +23,7 @@
             'select':((temStartYear*10000)+(temStartMonth*100)+(temStartDay)
             <=(nextyear[mNm].year*10000) +(nextyear[mNm].month*100) +item
             && (nextyear[mNm].year*10000) +(nextyear[mNm].month*100) +item
-            <=(temEndYear*10000)+(temEndMonth*100)+(temEndDay))
+            <=(temEndYear*10000)+(temEndMonth*100)+(temEndDay)) && item != ' '
             }"
           >{{item}}</div>
         </div>
@@ -123,31 +122,8 @@ export default {
   text-align: center;
   align-content: flex-start;
   box-sizing: border-box;
+}
 
-}
-.calender-main .each-block .select {
-  background-color: #218380;
-  border-radius: 50%;
-  color: white;
-  border: none;
-}
-.calender-main .each-block .choose {
-  background-color: #218380;
-  color: white;
-}
-.calender-main .each-block .defalut {
-  border-radius: 50%;
-  border: 0.5px solid lightgray;
-  box-sizing: border-box;
-}
-.calender-main .each-block .pass {
-  color: lightgray;
-  pointer-events: none !important;
-}
-.block-styel {
-  padding: 20rpx 20rpx;
-  box-sizing: border-box;
-}
 .each-block {
   width: 101rpx;
   height: 101rpx;
@@ -165,4 +141,39 @@ export default {
   box-shadow: 0;
   position: relative;
 }
+/* .block-style {
+  padding: 20rpx 20rpx;
+  box-sizing: border-box;
+} */
+.calender-main .each-block .select {
+  height: 80rpx;
+  width: 80rpx;
+  line-height: 80rpx;
+  background-color: #218380;
+  border-radius: 50%;
+  color: white;
+  border: none;
+}
+.calender-main .each-block .choose {
+  height: 80rpx;
+  width: 80rpx;
+  line-height: 80rpx;
+  background-color: #218380;
+  color: white;
+}
+.calender-main .each-block  .defalut {
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+  border: 0.5px solid lightgray;
+  box-sizing: border-box;
+}
+.calender-main .each-block  .pass {
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 80rpx;
+  color: lightgray;
+}
+
 </style>

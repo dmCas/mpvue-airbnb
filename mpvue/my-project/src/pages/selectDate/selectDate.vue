@@ -6,9 +6,9 @@
         <span>退房日期</span>
       </div>
       <div class="date">
-        <span class="start">{{startDay}}</span>
+        <span class="start">{{temStart}}</span>
         <span class="time">{{livingTime}}晚</span>
-        <span class="end">{{endDay}}</span>
+        <span class="end">{{temEnd}}</span>
       </div>
     </div>
     <div class="calendar">
@@ -22,7 +22,7 @@
     <div class="handle">
       <span class="clear" @click="clearChoose">清空日期</span>
       <div class="display"></div>
-      <button class="save" @click="saveChoose">保存</button>
+      <button class="save" @click="save">保存</button>
     </div>
   </div>
 </template>
@@ -53,15 +53,19 @@ export default {
       'currentMonth',
       'startDay',
       'endDay',
-      'livingTime'
+      'livingTime',
+      'temStart',
+      'temEnd'
     ])
   },
   methods: {
     ...mapActions([
       'getCurMon',
-      'clearChoose'
+      'clearChoose',
+      'saveChoose'
     ]),
-    saveChoose(){
+    save(){
+      this.saveChoose()
       console.log(123);
       const url = "../home/main.js";
       wx.navigateBack({

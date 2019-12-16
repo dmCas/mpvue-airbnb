@@ -19,6 +19,8 @@ const state = {
   temEndDay: null,
   temEndMonth: null,
   temEndYear: null,
+  temStart: null,
+  temEnd: null,
   //存放一年的年月
   nextYear : [],
   eachMonthDays : [],
@@ -50,9 +52,11 @@ const mutations = {
     state.temEndYear = state.currentYear
  
      //默认开始为当前日期
-     state.startDay = state.currentMonth + '月' +state.currentDay +'日'
+     state.temStart = state.currentMonth + '月' +state.currentDay +'日'
      //默认结束为第二天
-     state.endDay = state.currentMonth + '月' + (state.currentDay+1) +'日'
+     state.temEnd = state.currentMonth + '月' + (state.currentDay+1) +'日'
+     state.startDay = state.temStart
+     state.endDay = state.temEnd
     //当前月份的天数
     state.currentDayNum = new Date(state.currentYear, state.currentMonth, 0).getDate();
     //获取第一天的周几
@@ -131,8 +135,8 @@ const mutations = {
         state.temEndMonth = val.month
         state.temEndYear = val.year
         //重新设置入住日期、退房日期
-        state.startDay = state.temStartMonth + '月' + state.temStartDay + '日'
-        state.endDay = state.temEndMonth + '月' + state.temEndDay + '日'
+        state.temStart = state.temStartMonth + '月' + state.temStartDay + '日'
+        state.temEnd = state.temEndMonth + '月' + state.temEndDay + '日'
         state.count = 2
         // state.livingTime = state.endDay - state.startDay
         state.endComplete = val.year + '/' + val.month + '/' + val.day
@@ -150,8 +154,16 @@ const mutations = {
     // state.endDay = start+1
   },
   [types.CLEAR_CHOOSE](state) {
-    state.startDay = date.getDate()
-
+    state.temStartDay = ''
+    state.temStartMonth = ''
+    state.temStartYear = ''
+    state.temEndDay = ''
+    state.temEndMonth = ''
+    state.temEndYear = ''
+  },
+  [types.SAVE_CHOOSE](state) {
+    state.startDay = state.temStartMonth + '月' + state.temStartDay + '日'
+    state.endDay = state.temEndMonth + '月' + state.temEndDay + '日'
   }
 }
 
@@ -164,6 +176,9 @@ const actions = {
   },
   clearChoose({ commit }) {
     commit(types.CLEAR_CHOOSE)
+  },
+  saveChoose({commit}){
+    commit(types.SAVE_CHOOSE)
   },
   nextYear({commit}){
     commit(types.NEXT_YEAR)
@@ -187,6 +202,8 @@ const getters = {
   temEndDay: state => state.temEndDay,
   temEndMonth: state => state.temEndMonth,
   temEndYear: state => state.temEndYear,
+  temStart: state => state.temStart,
+  temEnd: state => state.temEnd,
   nextyear : state => state.nextYear,
   eachMonthDays : state => state.eachMonthDays,
   //每个月的第一天是星期几
