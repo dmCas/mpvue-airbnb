@@ -30,6 +30,11 @@
         <span>·最多可住{{Details.capacity}}人</span>
       </div>
       <v-discount></v-discount>
+      <div class="introduce">
+        <p>{{Details.introduce}}</p>
+        <span class="more" @click="showPopup">查看更多房源介绍</span>
+      </div>
+      <v-service :service="service"></v-service>
     </div>
   </div>
 </template>
@@ -37,23 +42,28 @@
 <script>
 import fly from '@/utils/flyios'
 import discount from '@/components/discount.vue'
+import service from '@/components/service.vue'
 export default {
   data(){
     return{
       Details:[],
-      imgUrl:[]
+      imgUrl:[],
+      show:false,
+      service:[]
     }
   },
   components:{
-    'v-discount':discount
+    'v-discount':discount,
+    'v-service':service
   },
   methods: {
     getData(){
       fly.get('')
       .then(res =>{
         this.Details = res.data.preference[0].house[0],
-        this.imgUrl = this.Details.swiperPic
-        console.log(this.imgUrl)
+        this.imgUrl = this.Details.swiperPic,
+        this.service = this.Details.service
+        // console.log(this.imgUrl)
       })
     },
     routerSelect(){
@@ -61,6 +71,9 @@ export default {
       wx.navigateTo({
         url
       });
+    },
+    showPopup() {
+      this.show = true;
     }
   },
   created(){
@@ -160,5 +173,23 @@ h3{
 }
 .capacity{
   padding: 30rpx 0;
+}
+.introduce{
+  padding: 0 0 30rpx 0;
+  border-bottom: 1px solid rgba(7, 17, 27, 0.1);
+}
+
+.introduce p{
+  text-overflow :ellipsis; /*让截断的文字显示为点点。还有一个值是clip意截断不显示点点*/
+  overflow : hidden;
+  line-clamp: 2;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+}
+.introduce .more{
+  color: #218380;
 }
 </style>

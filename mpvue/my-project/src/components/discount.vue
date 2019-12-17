@@ -57,7 +57,7 @@ export default {
   font-weight: bold;
 }
 .tip{
-  padding: 16rpx 0;
+  padding: 30rpx 0;
   font-size: 24rpx;
 }
 .tip  img{

@@ -1,10 +1,15 @@
 {
   "pages": [
-    "pages/houseMain/main",
     "pages/home/main",
+    "pages/houseMain/main",
     "pages/selectDate/main",
     "pages/mine/main"
   ],
+  "usingComponents": {
+    "van-cell":"static/dist/cell/index",
+    "van-popup": "static/dist/popup/index",
+    "van-slider":"static/dist/slider/index"
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",

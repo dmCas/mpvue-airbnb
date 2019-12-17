@@ -1,204 +1,228 @@
 {
   "indexPage": {
-    "advertise":[
+    "advertise": [
       {
         "id": "1",
-        "desc":"元旦精彩特惠季团聚尽在爱彼迎",
-        "extra":"领取千元团聚礼包",
-        "PicUrl":"https://z1.muscache.cn/pictures/hongbao/marquee/original/d2acad28-b15a-4619-9977-06615a70d35b.jpg"
+        "desc": "元旦精彩特惠季团聚尽在爱彼迎",
+        "extra": "领取千元团聚礼包",
+        "PicUrl": "https://z1.muscache.cn/pictures/hongbao/marquee/original/d2acad28-b15a-4619-9977-06615a70d35b.jpg"
       },
       {
         "id": "2",
-        "desc":"跳上高铁去旅行",
-        "extra":"游南逛北过冬天",
-        "PicUrl":"https://z1.muscache.cn/pictures/hongbao/marquee/original/3520754b-3114-463e-b43b-65828430fab6.jpg"
+        "desc": "跳上高铁去旅行",
+        "extra": "游南逛北过冬天",
+        "PicUrl": "https://z1.muscache.cn/pictures/hongbao/marquee/original/3520754b-3114-463e-b43b-65828430fab6.jpg"
       },
       {
         "id": "3",
-        "desc":"爱彼迎[表情]QQ音乐跟随",
-        "extra":"跟随国风歌单游六都",
-        "PicUrl":"https://z1.muscache.cn/pictures/hongbao/marquee/original/7d85c383-fd27-4168-9ab9-890218822059.jpg"
+        "desc": "爱彼迎[表情]QQ音乐跟随",
+        "extra": "跟随国风歌单游六都",
+        "PicUrl": "https://z1.muscache.cn/pictures/hongbao/marquee/original/7d85c383-fd27-4168-9ab9-890218822059.jpg"
       },
       {
         "id": "4",
-        "desc":"奇遇杭州",
-        "extra":"西湖荡桨忆童年",
-        "PicUrl":"https://z1.muscache.cn/pictures/hongbao/marquee/original/eb70e28c-2ba9-4dee-b5ac-dbfa9e5029e2.jpg"
-
+        "desc": "奇遇杭州",
+        "extra": "西湖荡桨忆童年",
+        "PicUrl": "https://z1.muscache.cn/pictures/hongbao/marquee/original/eb70e28c-2ba9-4dee-b5ac-dbfa9e5029e2.jpg"
       },
       {
         "id": "5",
-        "desc":"飞跃赤道过夏天",
-        "extra":"阳光海风温暖亲子时光",
-        "PicUrl":"https://z1.muscache.cn/pictures/hongbao/marquee/original/ca845c98-bb1f-42b2-bc50-95fbb796d697.jpg"
+        "desc": "飞跃赤道过夏天",
+        "extra": "阳光海风温暖亲子时光",
+        "PicUrl": "https://z1.muscache.cn/pictures/hongbao/marquee/original/ca845c98-bb1f-42b2-bc50-95fbb796d697.jpg"
       }
     ],
-    "generalize":[
+    "generalize": [
       {
         "id": "6",
-        "desc":"领取千元团聚礼包",
-        "PicUrl":"https://z1.muscache.cn/pictures/hongbao/marquee/original/79c5a480-54b3-4acd-a5da-141272a67564.jpg"
+        "desc": "领取千元团聚礼包",
+        "PicUrl": "https://z1.muscache.cn/pictures/hongbao/marquee/original/79c5a480-54b3-4acd-a5da-141272a67564.jpg"
       }
     ],
-    "preference":[
+    "preference": [
       {
-        "city":"苏州",
-        "cityId":"1",
-        "house":[
+        "city": "苏州",
+        "cityId": "1",
+        "house": [
           {
-            "houseId":"1",
-            "housePositon":"近平江/山塘/苏州站/苏州北站/拙政园/苏州博物馆+地铁口旁【书生】",
-            "type":"整套公寓 · 1卧1床1.5卫",
-            "OldPrice":"￥238",
-            "NewPrice":"￥190",
-            "Rating":"4.8",
-            "comments":"44",
-            "price":"超赞房东",
-            "showPic":"https://z1.muscache.cn/im/pictures/72c59b2e-92e1-479c-8a6e-c6fa2bf8ac23.jpg?aki_policy=large",
-            "swiperPic":[
+            "houseId": "1",
+            "housePositon": "近平江/山塘/苏州站/苏州北站/拙政园/苏州博物馆+地铁口旁【书生】",
+            "type": "整套公寓 · 1卧1床1.5卫",
+            "OldPrice": "￥238",
+            "NewPrice": "￥190",
+            "Rating": "4.8",
+            "comments": "44",
+            "price": "超赞房东",
+            "showPic": "https://z1.muscache.cn/im/pictures/72c59b2e-92e1-479c-8a6e-c6fa2bf8ac23.jpg?aki_policy=large",
+            "swiperPic": [
               "https://z1.muscache.cn/im/pictures/72c59b2e-92e1-479c-8a6e-c6fa2bf8ac23.jpg?aki_policy=xx_large",
               "https://z1.muscache.cn/im/pictures/9c2c49d1-9442-49ab-ac20-dc387f97319b.jpg?aki_policy=large",
               "https://z1.muscache.cn/im/pictures/0cb4234d-8f1d-4d5b-b8b7-ae089264d580.jpg?aki_policy=large",
               "https://z1.muscache.cn/im/pictures/befbd8fd-f4f5-4548-af7e-f8f984662074.jpg?aki_policy=x_large"
             ],
-            "desc":["超赞房东","高铁接送·轻享入住","可以做饭","可以停车","有洗衣机","有烘干机"],
-            "capacity":"2"
+            "desc": [
+              "超赞房东",
+              "高铁接送·轻享入住",
+              "可以做饭",
+              "可以停车",
+              "有洗衣机",
+              "有烘干机"
+            ],
+            "capacity": "2",
+            "introduce":"预订前抽出30秒阅读以下描述和入住须知,预定默认同意喔！不接待外宾和港澳台的游客。【关于合住】双层公寓，房东入住第二层，提供一楼卧室和独立卫生间作为民宿。（接受情侣，闺蜜，女生，不接受男生单独入住）【简介】苏州市中心唯一精致装修公寓，中空设计。健身房咖啡店美容店美甲店理发店超市一体化。下楼即地铁，地铁15分钟直达火车站,10分钟直达观前街,平江路,拙政园,博物馆各大园林等热门景点。地铁直达苏州中心，诚品书店，地处苏州市团结桥站，该处位置去老市区或园区苏州中心，虎丘寒山寺十分方便快捷。从家步行200米有汽车共享租用站。【独立房间】宽敞明亮，家具全新定制，床品一客一换，高温消毒清洗后晒干，保证卫生及柔软度。房内配有46寸网络电视，手机即可投屏，提供电视软件的会员，如有需要联系我即可。【浴室】配有洗发露护发素沐浴露都为美国多芬品牌。洗面奶，消毒液，欧莱雅护发精油；一次性拖鞋，牙具，毛巾，纸巾，吹风机。【房屋】准备餐具，洗衣机，冰箱，电磁炉，微波炉，音乐播放器，中央空调，24h热水，是独立卫生间。Hi！你们好，很高兴认识你！（ps：上面简介和房源详情都是我们辛苦自己码的字～是我们的家的情况介绍～有其他房东直接复制粘贴实在太令人伤心啦！）苏州市中心全新公寓,独立的卧室及卫生间。房子是刷卡上电梯,24小时安保巡逻非常安全。提供的服务有：如有需要可根据您的喜好为您私人定制生日会，纪念日布置，甜品台生日蛋糕生日订制。免费提供自己做的下午茶或者小甜品（或自己做的当地苏州时令小吃）。如果有需要，还可以为您推荐当地苏州特色小吃，游玩去处。我们热爱甜品，热爱生活，喜欢交朋友，喜欢旅游。这是一个有爱和故事的小屋，我会把你当成我的朋友一样好，希望你也可以对待我的家温柔一些，不要损坏里面的东西，如有损坏需照价赔偿哦！注意 ，因房东是女生，要在二层照顾宠物共同入住，所以房客有一定的要求哦😊：1.民宿只接待喜欢猫咪狗狗的房客。（对宠物毛发过敏的请看看其他家喔）2.民宿接待情侣，姐妹，闺蜜，女生入住🌈不接待两名男生或者一名男生入住！感谢理解喔(^○^)3.合住房源，不接待年龄较大的长辈，为避免不愉快的体验，给长辈订房的请注意一下！！4.不接待婴幼儿，15周岁以下的孩子。5.不接待外宾和港澳台的游客。Sorry, we do not receive foreign guests，抱歉语言和文化的差异让我们暂时无法接待，还有许多独立的优秀房源可以参考。6.预定前请点开房屋守则确定一下喔！比心：）7.入住人员配合当地派出所工作，需要提供身份证照片作为信息登记～（可作用途水印）这个民宿的意义在于 在这个城市，为来自远方的你，为同样热爱生活的你，为有爱有故事的房客或者朋友们提供一个温暖的家。期待与你们的相遇💝",
+            "service":[
+              {
+                "tip":"整套公寓",
+                "extra":"无需与房东或房客共享空间，独享整个房源",
+                "pic":"../../static/images/公寓预订.png"
+              },
+              {
+                "tip":"入住退房",
+                "extra":"入住时间 15：00后·退房时间",
+                "pic":"../../static/images/时间.png"
+              },
+              {
+                "tip":"自助入住",
+                "extra":"通过密码锁自助入住",
+                "pic":"../../static/images/钥匙.png"
+              }
+            ]
           },
           {
-            "houseId":"2",
-            "housePositon":"【都市】近苏州站/平江/山塘/苏州博物馆/观前街/拙政园/山塘街/留园+近地铁口",
-            "type":"整套公寓 · 1张床",
-            "OldPrice":"￥189",
-            "NewPrice":"￥151",
-            "Rating":"4.9",
-            "comments":"35",
-            "price":"超赞房东",
-            "showPic":"https://z1.muscache.cn/im/pictures/7902eaa6-bdb6-40a6-8c43-15272a5d8f98.jpg?aki_policy=large"
+            "houseId": "2",
+            "housePositon": "White Roof:陕西南路/黄埔/南京西路/巨鹿路/屋塔上的独立小世界/Single Room",
+            "type": "整套公寓 · 1张床",
+            "OldPrice": "￥88",
+            "NewPrice": "￥77",
+            "Rating": "4.9",
+            "comments": "167",
+            "price": "超赞房东",
+            "showPic": "https://z1.muscache.cn/im/pictures/bf925ffb-fb98-4624-bd99-61c5c2df1301.jpg?aki_policy=large"
           },
           {
-            "houseId":"3",
-            "housePositon":"「Time·清新Home」苏州站北站万达/诚品·地铁·观前·拙政园/高端公寓/温暖阳光超高观景",
-            "type":"整套公寓 · 1张床",
-            "OldPrice":"￥168",
-            "NewPrice":"￥151",
-            "Rating":"4.6",
-            "comments":"45",
-            "price":"超赞房东",
-            "showPic":"https://z1.muscache.cn/im/pictures/5694ec03-104c-4f83-866d-3d6e0dafd51d.jpg?aki_policy=large"
+            "houseId": "3",
+            "type": "整套公寓 · 1张床",
+            "housePositon": "网红设计师别墅Daydream designer homeの愈宿~澄天~星空浴缸房 治愈系muji风",
+            "OldPrice": "￥168",
+            "NewPrice": "￥151",
+            "Rating": "4.6",
+            "comments": "45",
+            "price": "超赞房东",
+            "showPic": "https://z1.muscache.cn/im/pictures/5694ec03-104c-4f83-866d-3d6e0dafd51d.jpg?aki_policy=large"
           },
           {
-            "houseId":"4",
-            "housePositon":"【埃文居·钮】紧邻平江路拙政园观前街苏大 火车站一号线地铁口 ins温馨北欧家庭影院阁楼院",
-            "type":"整套房子 · 1张床",
-            "OldPrice":"￥168",
-            "NewPrice":"￥143",
-            "Rating":"4.2",
-            "comments":"45",
-            "price":"超赞房东",
-            "showPic":"https://z1.muscache.cn/im/pictures/5b4204f5-86de-4eb7-9e0f-c824a14201b4.jpg?aki_policy=large"
+            "houseId": "4",
+            "housePositon": "【埃文居·钮】紧邻平江路拙政园观前街苏大 火车站一号线地铁口 ins温馨北欧家庭影院阁楼院",
+            "type": "整套房子 · 1张床",
+            "OldPrice": "￥168",
+            "NewPrice": "￥143",
+            "Rating": "4.2",
+            "comments": "45",
+            "price": "超赞房东",
+            "showPic": "https://z1.muscache.cn/im/pictures/5b4204f5-86de-4eb7-9e0f-c824a14201b4.jpg?aki_policy=large"
           },
           {
-            "houseId":"5",
-            "housePositon":"a「寻宿」阑珊 紧邻苏州火车站 地铁口 平江路 狮子林 极佳视野",
-            "type":"整套公寓 · 1张床",
-            "OldPrice":"￥158",
-            "NewPrice":"￥134",
-            "Rating":"4.2",
-            "comments":"41",
-            "price":"超赞房东",
-            "showPic":"https://z1.muscache.cn/im/pictures/a10acc7a-feb6-4016-97d5-6f50e476d7f6.jpg?aki_policy=large"
+            "houseId": "5",
+            "housePositon": "a「寻宿」阑珊 紧邻苏州火车站 地铁口 平江路 狮子林 极佳视野",
+            "type": "整套公寓 · 1张床",
+            "OldPrice": "￥158",
+            "NewPrice": "￥134",
+            "Rating": "4.2",
+            "comments": "41",
+            "price": "超赞房东",
+            "showPic": "https://z1.muscache.cn/im/pictures/a10acc7a-feb6-4016-97d5-6f50e476d7f6.jpg?aki_policy=large"
           },
           {
-            "houseId":"6",
-            "housePositon":"【埃文居·范】小而温馨 紧邻地铁口 平江路/拙政园/苏博/火车站/山塘街/狮子林",
-            "type":"整套公寓 · 1张床",
-            "OldPrice":"￥108",
-            "NewPrice":"￥92",
-            "Rating":"4.1",
-            "comments":"12",
-            "price":"绝对好房",
-            "showPic":"https://z1.muscache.cn/im/pictures/0fe4bef8-2e12-4c13-8d08-509cb1d655d3.jpg?aki_policy=large"
+            "houseId": "6",
+            "housePositon": "【埃文居·范】小而温馨 紧邻地铁口 平江路/拙政园/苏博/火车站/山塘街/狮子林",
+            "type": "整套公寓 · 1张床",
+            "OldPrice": "￥108",
+            "NewPrice": "￥92",
+            "Rating": "4.1",
+            "comments": "12",
+            "price": "绝对好房",
+            "showPic": "https://z1.muscache.cn/im/pictures/0fe4bef8-2e12-4c13-8d08-509cb1d655d3.jpg?aki_policy=large"
           }
         ]
       },
       {
-        "city":"上海",
-        "cityId":"2",
-        "house":[
+        "city": "上海",
+        "cityId": "2",
+        "house": [
           {
-            "houseId":"1",
-            "housePositon":"网红设计师别墅Daydream designer homeの愈宿~澄天~星空浴缸房 治愈系muji风",
-            "type":"整栋别墅 · 1张床",
-            "OldPrice":"￥575",
-            "NewPrice":"￥653",
-            "Rating":"4.8",
-            "comments":"29",
-            "price":"超赞房东",
-            "showPic":"https://z1.muscache.cn/im/pictures/272b26a0-9c8b-4e1b-97aa-c68c65fe4d88.jpg?aki_policy=large"
+            "houseId": "1",
+            "housePositon": "网红设计师别墅Daydream designer homeの愈宿~澄天~星空浴缸房 治愈系muji风",
+            "type": "整栋别墅 · 1张床",
+            "OldPrice": "￥575",
+            "NewPrice": "￥653",
+            "Rating": "4.8",
+            "comments": "29",
+            "price": "超赞房东",
+            "showPic": "https://z1.muscache.cn/im/pictures/272b26a0-9c8b-4e1b-97aa-c68c65fe4d88.jpg?aki_policy=large"
           },
           {
-            "houseId":"2",
-            "housePositon":"White Roof:陕西南路/黄埔/南京西路/巨鹿路/屋塔上的独立小世界/Single Room",
-            "type":"整套公寓 · 1张床",
-            "OldPrice":"￥88",
-            "NewPrice":"￥77",
-            "Rating":"4.9",
-            "comments":"167",
-            "price":"超赞房东",
-            "showPic":"https://z1.muscache.cn/im/pictures/bf925ffb-fb98-4624-bd99-61c5c2df1301.jpg?aki_policy=large"
+            "houseId": "2",
+            "housePositon": "White Roof:陕西南路/黄埔/南京西路/巨鹿路/屋塔上的独立小世界/Single Room",
+            "type": "整套公寓 · 1张床",
+            "OldPrice": "￥88",
+            "NewPrice": "￥77",
+            "Rating": "4.9",
+            "comments": "167",
+            "price": "超赞房东",
+            "showPic": "https://z1.muscache.cn/im/pictures/bf925ffb-fb98-4624-bd99-61c5c2df1301.jpg?aki_policy=large"
           },
           {
-            "houseId":"3",
-            "housePositon":"【新天地】淮海中路/k11，淡水路超性价比一居",
-            "type":"整套公寓 · 1张床",
-            "OldPrice":"￥200",
-            "NewPrice":"￥170",
-            "Rating":"4.1",
-            "comments":"43",
-            "price":"超赞房东",
-            "showPic":"https://z1.muscache.cn/im/pictures/f4ba31ec-c4e5-414c-a741-87ff40b6f847.jpg?aki_policy=large"
+            "houseId": "3",
+            "housePositon": "【新天地】淮海中路/k11，淡水路超性价比一居",
+            "type": "整套公寓 · 1张床",
+            "OldPrice": "￥200",
+            "NewPrice": "￥170",
+            "Rating": "4.1",
+            "comments": "43",
+            "price": "超赞房东",
+            "showPic": "https://z1.muscache.cn/im/pictures/f4ba31ec-c4e5-414c-a741-87ff40b6f847.jpg?aki_policy=large"
           },
           {
-            "houseId":"4",
-            "housePositon":"市中心经济首选 位于淮海路 Line & Muji 新天地 Found158 TAXX星巴克烘焙工坊",
-            "type":"整套房子 · 1张床",
-            "OldPrice":"￥188",
-            "NewPrice":"￥165",
-            "Rating":"4.2",
-            "comments":"173",
-            "price":"超赞房东",
-            "showPic":"https://z1.muscache.cn/im/pictures/f25b4f0e-de36-4a94-b912-577c9809b0a5.jpg?aki_policy=large"
+            "houseId": "4",
+            "housePositon": "市中心经济首选 位于淮海路 Line & Muji 新天地 Found158 TAXX星巴克烘焙工坊",
+            "type": "整套房子 · 1张床",
+            "OldPrice": "￥188",
+            "NewPrice": "￥165",
+            "Rating": "4.2",
+            "comments": "173",
+            "price": "超赞房东",
+            "showPic": "https://z1.muscache.cn/im/pictures/f25b4f0e-de36-4a94-b912-577c9809b0a5.jpg?aki_policy=large"
           },
           {
-            "houseId":"5",
-            "housePositon":"超级舒适/高级公寓地铁旁/市中心长寿路静安寺/办公/学习/旅游/Wi-Fi",
-            "type":"整套公寓 · 1张床",
-            "OldPrice":"￥218",
-            "NewPrice":"￥196",
-            "Rating":"4.2",
-            "comments":"41",
-            "price":"超赞房东",
-            "showPic":"https://z1.muscache.cn/im/pictures/94d2c377-0b28-42b9-bbd1-7d8393e97305.jpg?aki_policy=large"
+            "houseId": "5",
+            "housePositon": "超级舒适/高级公寓地铁旁/市中心长寿路静安寺/办公/学习/旅游/Wi-Fi",
+            "type": "整套公寓 · 1张床",
+            "OldPrice": "￥218",
+            "NewPrice": "￥196",
+            "Rating": "4.2",
+            "comments": "41",
+            "price": "超赞房东",
+            "showPic": "https://z1.muscache.cn/im/pictures/94d2c377-0b28-42b9-bbd1-7d8393e97305.jpg?aki_policy=large"
           },
           {
-            "houseId":"6",
-            "housePositon":"《温馨小屋》现代简约风设计距离《南京东路》《人民广场》《外滩》《城隍庙》《地铁1号-2号》机场直达",
-            "type":"整套公寓 · 1张床",
-            "OldPrice":"￥187",
-            "NewPrice":"￥208",
-            "Rating":"5",
-            "comments":"2",
-            "price":"绝对好房",
-            "showPic":"https://z1.muscache.cn/im/pictures/87c9c464-556b-4a7d-9fd7-46681dad1a89.jpg?aki_policy=large"
+            "houseId": "6",
+            "housePositon": "《温馨小屋》现代简约风设计距离《南京东路》《人民广场》《外滩》《城隍庙》《地铁1号-2号》机场直达",
+            "type": "整套公寓 · 1张床",
+            "OldPrice": "￥187",
+            "NewPrice": "￥208",
+            "Rating": "5",
+            "comments": "2",
+            "price": "绝对好房",
+            "showPic": "https://z1.muscache.cn/im/pictures/87c9c464-556b-4a7d-9fd7-46681dad1a89.jpg?aki_policy=large"
           }
         ]
       },
       {
-        "city":"杭州",
-        "cityId":"3",
-        "house":[
+        "city": "杭州",
+        "cityId": "3",
+        "house": [
           {
-            "houseId":"1",
+            "houseId": "1",
             "type": "独立房间 · 1张床",
             "housePositon": "【带露台温馨屋】西湖边北欧风小屋 近杭州大厦 嘉里中心 武林广场 7分钟到达地铁口机场大巴",
             "Price": "价格￥160价格￥178 每晚",
@@ -206,54 +230,54 @@
             "showPic": "https://z1.muscache.cn/im/pictures/1591e4ac-9351-4066-a50f-80c95a080535.jpg?aki_policy=large"
           },
           {
-            "houseId":"2",
+            "houseId": "2",
             "type": "整套公寓 · 1张床",
             "housePositon": "【知眠·仲夏夜】市中心的摄影师美宿/投影仪/四季青/杭州城站/1号线地铁口/1站到西湖/机场大巴",
             "Rating": "3",
-            "comments":"35",
-            "price":"超赞房东",
+            "comments": "35",
+            "price": "超赞房东",
             "showPic": "https://z1.muscache.cn/im/pictures/f2415e8a-e451-43e7-bf4f-bacaf442ab28.jpg?aki_policy=large"
           },
           {
-            "houseId":"3",
+            "houseId": "3",
             "type": "整套公寓 · 1张床",
             "housePositon": "柚子の家/步行五分钟达城西银泰 五号线地铁口 近浙大运河西溪 日短租独立房间 温馨交通便利 投影",
             "showPic": "https://z1.muscache.cn/im/pictures/0cf337f0-d9bc-4bdd-b9dc-fb2bccbc51ea.jpg?aki_policy=large",
-            "OldPrice":"￥168",
-            "NewPrice":"￥151",
-            "Rating":"4.6",
-            "comments":"45",
-            "price":"超赞房东"
+            "OldPrice": "￥168",
+            "NewPrice": "￥151",
+            "Rating": "4.6",
+            "comments": "45",
+            "price": "超赞房东"
           },
           {
-            "houseId":"4",
+            "houseId": "4",
             "type": "整套公寓 · 2张床",
             "housePositon": "西湖湖滨商圈简约上下loft邻近地铁口",
             "showPic": "https://z1.muscache.cn/im/pictures/0791c27c-b2b6-4853-9a5a-3ded441b71bb.jpg?aki_policy=large",
-            "OldPrice":"￥168",
-            "NewPrice":"￥143",
-            "Rating":"4.2",
-            "comments":"45",
-            "price":"超赞房东"
+            "OldPrice": "￥168",
+            "NewPrice": "￥143",
+            "Rating": "4.2",
+            "comments": "45",
+            "price": "超赞房东"
           },
           {
-            "houseId":"5",
-            "OldPrice":"￥158",
-            "NewPrice":"￥134",
-            "Rating":"4.2",
-            "comments":"41",
-            "price":"超赞房东",
+            "houseId": "5",
+            "OldPrice": "￥158",
+            "NewPrice": "￥134",
+            "Rating": "4.2",
+            "comments": "41",
+            "price": "超赞房东",
             "type": "整间Loft · 2张床",
             "housePositon": "拾玖民宿【北欧】loft两室一厅 虾龙圩地铁口 浙大紫金港校区旁，近城西银泰 大悦城西溪湿地",
             "showPic": "https://z1.muscache.cn/im/pictures/efd7b6ad-202e-449e-ab01-08d7d8064e25.jpg?aki_policy=large"
           },
           {
-            "houseId":"6",
-            "OldPrice":"￥108",
-            "NewPrice":"￥92",
-            "Rating":"4.1",
-            "comments":"12",
-            "price":"绝对好房",
+            "houseId": "6",
+            "OldPrice": "￥108",
+            "NewPrice": "￥92",
+            "Rating": "4.1",
+            "comments": "12",
+            "price": "绝对好房",
             "type": "独立房间 · 1张床",
             "housePositon": "特价【北欧ins温馨】【投影仪】English【市中心】浙大浙一•二邵逸夫医院地铁口庆春银泰优惠美甲",
             "Price": "价格￥124价格￥138 每晚",
@@ -262,74 +286,73 @@
         ]
       },
       {
-        "city":"北京",
-        "cityId":"4",
-        "house":[
+        "city": "北京",
+        "cityId": "4",
+        "house": [
           {
-            "houseId":"1",
-            "OldPrice":"￥238",
-            "NewPrice":"￥190",
-            "Rating":"4.8",
-            "comments":"44",
-            "price":"超赞房东",
+            "houseId": "1",
+            "OldPrice": "￥238",
+            "NewPrice": "￥190",
+            "Rating": "4.8",
+            "comments": "44",
+            "price": "超赞房东",
             "type": "独立房间 · 1张床",
             "housePositon": "【北欧小居】惠新西街南口/对外经贸大学/中日友好医院/奥森/鸟巢",
             "showPic": "https://z1.muscache.cn/im/pictures/6516464b-e951-4514-bc2a-9b4c5ace7572.jpg?aki_policy=large"
           },
           {
-            "houseId":"2",
-            "OldPrice":"￥189",
-            "NewPrice":"￥151",
-            "Rating":"4.9",
-            "comments":"35",
-            "price":"超赞房东",
+            "houseId": "2",
+            "OldPrice": "￥189",
+            "NewPrice": "￥151",
+            "Rating": "4.9",
+            "comments": "35",
+            "price": "超赞房东",
             "type": "独立房间 · 1张床",
             "housePositon": "北四环惠新西街南口【简约北欧风卧室】",
             "showPic": "https://z1.muscache.cn/im/pictures/95ab66d8-9844-492d-9f08-2bd823ce5bf6.jpg?aki_policy=large"
-
           },
           {
-            "houseId":"3",
-            "housePositon":"「Time·清新Home」苏州站北站万达/诚品·地铁·观前·拙政园/高端公寓/温暖阳光超高观景",
-            "type":"整套公寓 · 1张床",
-            "OldPrice":"￥168",
-            "NewPrice":"￥151",
-            "Rating":"4.6",
-            "comments":"45",
-            "price":"超赞房东",
-            "showPic":"https://z1.muscache.cn/im/pictures/5694ec03-104c-4f83-866d-3d6e0dafd51d.jpg?aki_policy=large"
+            "houseId": "3",
+            "housePositon": "「Time·清新Home」苏州站北站万达/诚品·地铁·观前·拙政园/高端公寓/温暖阳光超高观景",
+            "type": "整套公寓 · 1张床",
+            "OldPrice": "￥168",
+            "NewPrice": "￥151",
+            "Rating": "4.6",
+            "comments": "45",
+            "price": "超赞房东",
+            "showPic": "https://z1.muscache.cn/im/pictures/5694ec03-104c-4f83-866d-3d6e0dafd51d.jpg?aki_policy=large"
           },
           {
-            "houseId":"4",
-            "OldPrice":"￥168",
-            "NewPrice":"￥143",
-            "Rating":"4.2",
-            "comments":"45",
-            "price":"超赞房东",
+            "houseId": "4",
+            "OldPrice": "￥168",
+            "NewPrice": "￥143",
+            "Rating": "4.2",
+            "comments": "45",
+            "price": "超赞房东",
             "type": "独立房间 · 1张床",
             "housePositon": "格调老房子 复现70年代末 推窗可见CBD 临近地铁 独立房间",
             "Price": "价格￥131价格￥146 每晚",
             "showPic": "https://z1.muscache.cn/im/pictures/a06a1908-2a04-4d59-ac2d-b5e09937dd39.jpg?aki_policy=large"
           },
           {
-            "houseId":"5",
-            "OldPrice":"￥158",
-            "NewPrice":"￥134",
-            "Rating":"4.2",
-            "comments":"41",
-            "price":"超赞房东",
+            "houseId": "5",
+            "OldPrice": "￥158",
+            "NewPrice": "￥134",
+            "Rating": "4.2",
+            "comments": "41",
+            "price": "超赞房东",
             "type": "合住房间 · 4张床",
             "housePositon": "王府井旁胡同里的老北京四合院之四人间B，步行到地铁站5分钟",
             "Price": "价格￥81价格￥90 每晚",
             "showPic": "https://z1.muscache.cn/im/pictures/ebf1ceaa-52b7-46a7-8b26-d11dda5f1364.jpg?aki_policy=large"
           },
           {
-            "houseId":"6",
-            "OldPrice":"￥108",
-            "NewPrice":"￥92",
-            "Rating":"4.1",
-            "comments":"12",
-            "price":"绝对好房",
+            "houseId": "6",
+            "OldPrice": "￥108",
+            "NewPrice": "￥92",
+            "Rating": "4.1",
+            "comments": "12",
+            "price": "绝对好房",
             "type": "独立房间 · 2张床",
             "housePositon": "【樱九右】带阳台宽敞主卧大榻榻米/北三环化工大学中日友好医院中医药大学对外经贸/近雍和宫后海簋街长租",
             "showPic": "https://z1.muscache.cn/im/pictures/8502edbf-d09b-422a-9eb9-4f295fa769ce.jpg?aki_policy=large"
@@ -337,74 +360,73 @@
         ]
       },
       {
-        "city":"武汉",
-        "cityId":"5",
-        "house":[
+        "city": "武汉",
+        "cityId": "5",
+        "house": [
           {
-            "houseId":"1",
-            "OldPrice":"￥238",
-            "NewPrice":"￥190",
-            "Rating":"4.8",
-            "comments":"44",
-            "price":"超赞房东",
+            "houseId": "1",
+            "OldPrice": "￥238",
+            "NewPrice": "￥190",
+            "Rating": "4.8",
+            "comments": "44",
+            "price": "超赞房东",
             "type": "独立房间 · 1张床",
             "housePositon": "【北欧小居】惠新西街南口/对外经贸大学/中日友好医院/奥森/鸟巢",
             "showPic": "https://z1.muscache.cn/im/pictures/6516464b-e951-4514-bc2a-9b4c5ace7572.jpg?aki_policy=large"
           },
           {
-            "houseId":"2",
-            "OldPrice":"￥189",
-            "NewPrice":"￥151",
-            "Rating":"4.9",
-            "comments":"35",
-            "price":"超赞房东",
+            "houseId": "2",
+            "OldPrice": "￥189",
+            "NewPrice": "￥151",
+            "Rating": "4.9",
+            "comments": "35",
+            "price": "超赞房东",
             "type": "独立房间 · 1张床",
             "housePositon": "北四环惠新西街南口【简约北欧风卧室】",
             "showPic": "https://z1.muscache.cn/im/pictures/95ab66d8-9844-492d-9f08-2bd823ce5bf6.jpg?aki_policy=large"
-
           },
           {
-            "houseId":"3",
-            "housePositon":"「Time·清新Home」苏州站北站万达/诚品·地铁·观前·拙政园/高端公寓/温暖阳光超高观景",
-            "type":"整套公寓 · 1张床",
-            "OldPrice":"￥168",
-            "NewPrice":"￥151",
-            "Rating":"4.6",
-            "comments":"45",
-            "price":"超赞房东",
-            "showPic":"https://z1.muscache.cn/im/pictures/5694ec03-104c-4f83-866d-3d6e0dafd51d.jpg?aki_policy=large"
+            "houseId": "3",
+            "housePositon": "「Time·清新Home」苏州站北站万达/诚品·地铁·观前·拙政园/高端公寓/温暖阳光超高观景",
+            "type": "整套公寓 · 1张床",
+            "OldPrice": "￥168",
+            "NewPrice": "￥151",
+            "Rating": "4.6",
+            "comments": "45",
+            "price": "超赞房东",
+            "showPic": "https://z1.muscache.cn/im/pictures/5694ec03-104c-4f83-866d-3d6e0dafd51d.jpg?aki_policy=large"
           },
           {
-            "houseId":"4",
-            "OldPrice":"￥168",
-            "NewPrice":"￥143",
-            "Rating":"4.2",
-            "comments":"45",
-            "price":"超赞房东",
+            "houseId": "4",
+            "OldPrice": "￥168",
+            "NewPrice": "￥143",
+            "Rating": "4.2",
+            "comments": "45",
+            "price": "超赞房东",
             "type": "独立房间 · 1张床",
             "housePositon": "格调老房子 复现70年代末 推窗可见CBD 临近地铁 独立房间",
             "Price": "价格￥131价格￥146 每晚",
             "showPic": "https://z1.muscache.cn/im/pictures/a06a1908-2a04-4d59-ac2d-b5e09937dd39.jpg?aki_policy=large"
           },
           {
-            "houseId":"5",
-            "OldPrice":"￥158",
-            "NewPrice":"￥134",
-            "Rating":"4.2",
-            "comments":"41",
-            "price":"超赞房东",
+            "houseId": "5",
+            "OldPrice": "￥158",
+            "NewPrice": "￥134",
+            "Rating": "4.2",
+            "comments": "41",
+            "price": "超赞房东",
             "type": "合住房间 · 4张床",
             "housePositon": "王府井旁胡同里的老北京四合院之四人间B，步行到地铁站5分钟",
             "Price": "价格￥81价格￥90 每晚",
             "showPic": "https://z1.muscache.cn/im/pictures/ebf1ceaa-52b7-46a7-8b26-d11dda5f1364.jpg?aki_policy=large"
           },
           {
-            "houseId":"6",
-            "OldPrice":"￥108",
-            "NewPrice":"￥92",
-            "Rating":"4.1",
-            "comments":"12",
-            "price":"绝对好房",
+            "houseId": "6",
+            "OldPrice": "￥108",
+            "NewPrice": "￥92",
+            "Rating": "4.1",
+            "comments": "12",
+            "price": "绝对好房",
             "type": "独立房间 · 2张床",
             "housePositon": "【樱九右】带阳台宽敞主卧大榻榻米/北三环化工大学中日友好医院中医药大学对外经贸/近雍和宫后海簋街长租",
             "showPic": "https://z1.muscache.cn/im/pictures/8502edbf-d09b-422a-9eb9-4f295fa769ce.jpg?aki_policy=large"

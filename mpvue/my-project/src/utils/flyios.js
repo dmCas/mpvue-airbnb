@@ -7,6 +7,7 @@ fly.interceptors.request.use((config,promise)=>{
   return config;
 })
 
+//配置请求基地址
 fly.config.baseURL="http://localhost:3000/indexPage"
 Vue.prototype.$http=fly
 export default fly

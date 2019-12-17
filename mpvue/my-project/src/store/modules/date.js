@@ -38,10 +38,7 @@ const mutations = {
     var date = new Date()
     //当前月份
     state.currentDay = date.getDate()
-   
-    
     // 默认结束为第二天
-    
     state.currentMonth = date.getMonth() + 1
     state.currentYear = date.getFullYear()
     state.temStartDay = date.getDate()
@@ -50,13 +47,12 @@ const mutations = {
     state.temEndDay = date.getDate() + 1
     state.temEndMonth = state.currentMonth
     state.temEndYear = state.currentYear
- 
-     //默认开始为当前日期
-     state.temStart = state.currentMonth + '月' +state.currentDay +'日'
+    //默认开始为当前日期
+    state.temStart = state.currentMonth + '月' +state.currentDay +'日'
      //默认结束为第二天
-     state.temEnd = state.currentMonth + '月' + (state.currentDay+1) +'日'
-     state.startDay = state.temStart
-     state.endDay = state.temEnd
+    state.temEnd = state.currentMonth + '月' + (state.currentDay+1) +'日'
+    state.startDay = state.temStart
+    state.endDay = state.temEnd
     //当前月份的天数
     state.currentDayNum = new Date(state.currentYear, state.currentMonth, 0).getDate();
     //获取第一天的周几

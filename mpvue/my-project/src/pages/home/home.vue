@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import fly from '@/utils/flyios'
+// import fly from '@/utils/flyios'
 import search from '@/components/search.vue'
 import preference from '@/components/preference.vue'
 export default {
@@ -57,7 +57,7 @@ export default {
   },
   methods: {
     getData(){
-      fly.get('')
+      this.$http.get('')
       .then(res =>{
         this.advData = res.data.advertise
         this.showMain = res.data.generalize
