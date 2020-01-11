@@ -86,7 +86,40 @@
                 "extra":"通过密码锁自助入住",
                 "pic":"../../static/images/钥匙.png"
               }
-            ]
+            ],
+            "facility":{
+              "count":17,
+              "base":[
+              {
+                "name":"有线电视",
+                "picurl":"../../static/images/facility/有线电视.png"
+              },
+              {
+                "name":"无线网络",
+                "picurl":"../../static/images/facility/无线网络.png"
+              },
+              {
+                "name":"生活必需品",
+                "picurl":"../../static/images/facility/生活必需品.png"
+              },
+              {
+                "name":"智能门锁",
+                "picurl":"../../static/images/facility/智能门锁.png"
+              }
+              ],
+              "synthesize":[
+                {
+                  "name":"平房",
+                  "picurl":"../../static/images/facility/平房.png"
+                }
+              ],
+              "bed":[
+                {
+                  "name":"吹风机",
+                  "picurl":"../../static/images/facility/吹风机.png"
+                }
+              ]
+            }
           },
           {
             "houseId": "2",
@@ -434,5 +467,6 @@
         ]
       }
     ]
+    
   }
 }

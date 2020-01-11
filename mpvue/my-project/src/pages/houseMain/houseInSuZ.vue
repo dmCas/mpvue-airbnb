@@ -35,6 +35,7 @@
         <span class="more" @click="showPopup">查看更多房源介绍</span>
       </div>
       <v-service :service="service"></v-service>
+      <v-facility :facility="facility"></v-facility>
     </div>
   </div>
 </template>
@@ -43,18 +44,21 @@
 import fly from '@/utils/flyios'
 import discount from '@/components/discount.vue'
 import service from '@/components/service.vue'
+import facility from '@/components/facility.vue'
 export default {
   data(){
     return{
       Details:[],
       imgUrl:[],
       show:false,
-      service:[]
+      service:[],
+      facility:[]
     }
   },
   components:{
     'v-discount':discount,
-    'v-service':service
+    'v-service':service,
+    'v-facility':facility
   },
   methods: {
     getData(){
@@ -63,7 +67,8 @@ export default {
         this.Details = res.data.preference[0].house[0],
         this.imgUrl = this.Details.swiperPic,
         this.service = this.Details.service
-        // console.log(this.imgUrl)
+        this.facility = this.Details.facility
+        // console.log(this.facility)
       })
     },
     routerSelect(){

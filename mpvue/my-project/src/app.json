@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/home/main",
     "pages/houseMain/main",
+    "pages/home/main",
     "pages/selectDate/main",
     "pages/mine/main"
   ],
