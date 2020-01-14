@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var count=0;
+    var Word = ['b', 'a', 'c', 'd']
+    function Com(List, n, len) {
+      if(n === len-1){
+        count++;
+      }
+      else{
+        // 依次换字母到第一个位置
+        for(let i=n; i<len; i++){
+          swap(List, n, i)
+          Com(List, n+1, len)
+          swap(List, n, i)
+        }
+     }
+    }
+    function swap(Arr, a, b){
+        let Str = []
+        Str = Arr[a]
+        Arr[a] = Arr[b]
+        Arr[b] = Str
+      }
+    Com(Word, 0, Word.length)
+    console.log(count)
+  </script>
+</body>
+</html>

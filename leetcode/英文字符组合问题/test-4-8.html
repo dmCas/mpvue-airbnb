@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //设置目的地
+    var target = 90;
+    //所有小于目的点可以扎营的地点
+    var point = [0, 27, 29, 53, 74, 75]
+    var count = 0;
+    var start = 0
+    function minLuyin(arr){
+      for(let i=1; i<arr.length; i++){
+        //找到最大移动距离 宿营天数加一
+        if(arr[i] > 30 + start){
+          count++
+          start = arr[i-1]//起点置为29 ->53 ->80
+          console.log(start)
+        }
+      }
+      if(target-start > 30){
+        count++
+        console.log(arr[arr.length-1])
+      }
+      console.log(count)
+    }
+    minLuyin(point)
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+   let amount = 1223;
+   let count = 0;
+   function Change(p){
+     for(let i = 1;i<=10;i++){
+       if(Math.pow(p,i-1)<= amount &&amount < Math.pow(p,i)){
+          amount = amount-Math.pow(p,i-1)
+          count++
+          i = 1
+       }
+     }
+     //如果零钱只能被用1找
+     if(amount<Math.pow(p,1)){
+         count = count + amount 
+       }
+     console.log(count)
+   }
+   Change(10)
+  
+  </script>
+</body>
+</html>

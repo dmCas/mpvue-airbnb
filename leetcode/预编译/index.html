@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- <script>
+  //函数声明->整体变量提升
+  //变量 声明提升
+  //任何变量如果未经过声明就赋值， 此变量就会成为全局变量
+  //一切声明的全局变量， 都归window所有
+
+  var b = 123;
+  window = {
+    b: 123
+  }
+
+
+  // console.log(a)
+  // var a = 123
+
+  
+  function test() {
+    console.log("Hello world")
+  }
+
+  </script> -->
+  <!-- <script>
+    function fn(a) {
+      console.log(a) //funtion() {}
+      var a = 123
+      console.log(a)  // 123
+      function a() {}
+      console.log(a) // 123
+      console.log(b) //undefined
+      var b = function() {} //函数表达式
+      console.log(b) //funtion() {}
+      function d() {}
+      var d=a;
+      console.log(d)
+    }
+    fn(1)
+  </script> -->
+  <!-- <script>
+  function test(a,b) {
+    console.log(a) //1
+    c = 0;
+    var c;
+    a = 3;
+    b = 2;
+    console.log(b)//2
+    function b() {}
+    function d() {}
+    console.log(b)//2
+    console.log(c)//0
+  }
+  test(1)
+  // 预编译
+  // AO {
+  //   a:1,
+  //   c:undefined,
+  //   b:function b(){},
+  //   d:function d(){}
+  // }
+  // // 执行test(1)
+  // AO {
+  //   a:3,
+  //   b:2
+  //   c:0
+  // }
+</script> -->
+  <script>
+  //   // GO 预编译
+  // // GO {
+  // //   global： undefined,->100
+  // //   fn: function() {
+  // //     console.log(global)
+  // //   }
+  // // }
+  //   var global = 100
+  //   function fn() {
+  //     console.log(global)
+  //   }
+  //    // AO 预编译
+  // // AO{
+
+  // // }
+  //   fn()
+  
+  GO {
+    a: 5
+  }
+  var a = 5
+  global = 100
+  function fn() {
+    console.log(a)                    
+    console.log(global) //undefined ->从里往外找 找到的第一个gobal为undefined
+    global = 200
+    console.log(global) //200
+    var global = 300
+  }
+
+  AO {
+    global: undefined
+  }
+  fn()
+  var global;
+  
+  </script>
+</body>
+</html>
