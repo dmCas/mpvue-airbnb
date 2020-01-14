@@ -1,14 +1,16 @@
 {
   "pages": [
     "pages/houseMain/main",
+    "pages/mine/main",
+
     "pages/home/main",
-    "pages/selectDate/main",
-    "pages/mine/main"
+    "pages/selectDate/main"
   ],
   "usingComponents": {
-    "van-cell":"static/dist/cell/index",
-    "van-popup": "static/dist/popup/index",
-    "van-slider":"static/dist/slider/index"
+    "i-button":"static/dist-ivew/button/index",
+    "i-action-sheet":"static/dist-ivew/action-sheet/index",
+    "van-action-sheet":"static/dist/action-sheet/index",
+    "van-button":"static/dist/button/index"
   },
   "window": {
     "backgroundTextStyle": "light",
@@ -21,7 +23,6 @@
     "backgroundColor": "#fafafa",
     "selectedColor": "#333",
     "borderStyle": "white",
-
     "list": [ {
       "pagePath": "pages/home/main",
       "iconPath": "static/images/Airbnb.png",

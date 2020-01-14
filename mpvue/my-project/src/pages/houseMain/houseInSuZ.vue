@@ -36,6 +36,7 @@
       </div>
       <v-service :service="service"></v-service>
       <v-facility :facility="facility"></v-facility>
+      <v-ratings></v-ratings>
     </div>
   </div>
 </template>
@@ -45,6 +46,7 @@ import fly from '@/utils/flyios'
 import discount from '@/components/discount.vue'
 import service from '@/components/service.vue'
 import facility from '@/components/facility.vue'
+import ratings from '@/components/ratings.vue'
 export default {
   data(){
     return{
@@ -58,7 +60,8 @@ export default {
   components:{
     'v-discount':discount,
     'v-service':service,
-    'v-facility':facility
+    'v-facility':facility,
+    'v-ratings':ratings
   },
   methods: {
     getData(){

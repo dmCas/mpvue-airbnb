@@ -1,41 +1,34 @@
 <template>
-  <div class="mine">
-    <van-popup
-      :show="show"
-      position="bottom"
-    />
-
-    <van-slider v-model="value" @change="onChange" />
+  <div class="showFacility">
+    <div class="main">
+      123
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      show: true,
-      value: 50
-    };
-  },
 
-  methods: {
-    showPopup() {
-      this.show = true;
-      console.log(this.show);
-    },
-    onChange(value) {
-      this.$toast("当前值：" + value);
-    }
-  }
-};
+}
 </script>
 
 <style>
-body {
-  height: 100vh;
-  width: 100%;
+body{
+  height: 100%;
 }
-.clearCache {
-  height: 80%;
+.showFacility{
+  height: 100%;
+  width: 100%;
+  background: rgba(224,227,218, 0.3);
+  position: relative;
+  
+}
+.showFacility .main{
+  background-color:  #fff;
+  position: absolute;
+  height: 375rpx;
+  width: 100%;
+  
+  top: 200rpx;
 }
 </style>

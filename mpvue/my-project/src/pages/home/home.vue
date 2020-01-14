@@ -39,7 +39,7 @@
 </template>
 
 <script>
-// import fly from '@/utils/flyios'
+import fly from '@/utils/flyios'
 import search from '@/components/search.vue'
 import preference from '@/components/preference.vue'
 export default {
@@ -66,12 +66,12 @@ export default {
       .catch(e => {
         console.log(e);
       })
-    },
+    },  
     currentHandle(event){      
       this.current = event.mp.detail.current
     },
   },
-  created(){
+  onLoad(){
     this.getData()
   },
 }

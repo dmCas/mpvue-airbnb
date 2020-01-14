@@ -7,7 +7,7 @@
       </div>
       <div class="part part-text">
         <p>+{{facility.count}}</p>
-        <p>更多设施</p>
+        <p @click="handleOpen">更多设施</p>
       </div>
     </div>
   </div>
@@ -18,11 +18,27 @@ export default {
   props:["facility"],
   data(){
     return{
-      show:[]
+      show:[],
+      visible: false
     }
   },
   created(){
-    this.show = this.facility.base.slice(0,3)
+    if(!this.facility.base){
+      return;
+    }
+    else{
+        this.show = this.facility.base.slice(0,3)
+    }
+  },
+  methods: {
+    handleOpen(){
+      this.visible = true
+      console.log(this.visible)
+    },
+    handleCancel(){
+      this.visible = false
+      console.log(this.visible)
+    }
   }
 }
 </script>
