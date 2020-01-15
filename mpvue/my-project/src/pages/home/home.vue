@@ -57,11 +57,15 @@ export default {
   },
   methods: {
     getData(){
+      wx.showLoading({
+        title: '加载中',
+    })
       this.$http.get('')
       .then(res =>{
         this.advData = res.data.advertise
         this.showMain = res.data.generalize
         this.preference = res.data.preference
+        wx.hideLoading();
       })
       .catch(e => {
         console.log(e);

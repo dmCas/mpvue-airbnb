@@ -2,13 +2,49 @@
   <div class="showFacility">
     <div class="main">
       123
+      {{location}}
+      <i-button @click="searchAddress"></i-button>
+      <map id="map" longitude="113.324520" latitude="23.099994" scale="14"  style="width: 100%; height: 300px;"></map>
     </div>
+    
   </div>
 </template>
 
 <script>
+import QQMapWX from "../../utils/map";
+    var qqmapsdk;
+    qqmapsdk = new QQMapWX({
+    key:'23SBZ-AJ36F-3GXJK-NZ2RE-5GH2Z-BABWF'
+    });
 export default {
+  data(){
+        return {
+            location
+        }
+    },
+    onLoad() {
+         wx.getLocation({
+            type: "gcj02",
+            success:(res)=>{
+            qqmapsdk.reverseGeocoder({
+                location: {
+                    latitude: res.latitude,
+                    longitude: res.longitude,
+                },
+            success:  (res) => {
+              console.log(res,this.location)
+                this.location = res.result.formatted_addresses.recommend
+            },
 
+        });
+      }
+         })
+    },
+    methods: {
+        searchAddress() {
+            wx.chooseLocation()
+        }
+    }
 }
 </script>
 
@@ -16,19 +52,5 @@ export default {
 body{
   height: 100%;
 }
-.showFacility{
-  height: 100%;
-  width: 100%;
-  background: rgba(224,227,218, 0.3);
-  position: relative;
-  
-}
-.showFacility .main{
-  background-color:  #fff;
-  position: absolute;
-  height: 375rpx;
-  width: 100%;
-  
-  top: 200rpx;
-}
+
 </style>

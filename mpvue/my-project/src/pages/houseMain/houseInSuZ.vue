@@ -36,7 +36,8 @@
       </div>
       <v-service :service="service"></v-service>
       <v-facility :facility="facility"></v-facility>
-      <v-ratings></v-ratings>
+      <v-ratings :comments="comments"></v-ratings>
+      <v-location></v-location>
     </div>
   </div>
 </template>
@@ -47,6 +48,7 @@ import discount from '@/components/discount.vue'
 import service from '@/components/service.vue'
 import facility from '@/components/facility.vue'
 import ratings from '@/components/ratings.vue'
+import location from '@/components/location.vue'
 export default {
   data(){
     return{
@@ -54,14 +56,16 @@ export default {
       imgUrl:[],
       show:false,
       service:[],
-      facility:[]
+      facility:[],
+      comments:[]
     }
   },
   components:{
     'v-discount':discount,
     'v-service':service,
     'v-facility':facility,
-    'v-ratings':ratings
+    'v-ratings':ratings,
+    'v-location':location
   },
   methods: {
     getData(){
@@ -71,7 +75,8 @@ export default {
         this.imgUrl = this.Details.swiperPic,
         this.service = this.Details.service
         this.facility = this.Details.facility
-        // console.log(this.facility)
+        this.comments = this.Details.ratings
+        console.log(this.comments)
       })
     },
     routerSelect(){
