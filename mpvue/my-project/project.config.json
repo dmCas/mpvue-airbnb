@@ -11,6 +11,7 @@
     "compileType": "miniprogram",
     "appid": "touristappid",
     "projectname": "my-project",
+    "cloudfunctionRoot": "static/functions/",
     "condition": {
         "search": {
             "current": -1,

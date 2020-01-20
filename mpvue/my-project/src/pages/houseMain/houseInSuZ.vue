@@ -76,7 +76,7 @@ export default {
         this.service = this.Details.service
         this.facility = this.Details.facility
         this.comments = this.Details.ratings
-        console.log(this.comments)
+        // console.log(this.comments)
       })
     },
     routerSelect(){

@@ -28,9 +28,9 @@
       <p class="big">想要的团聚</p>
       <p class="small">都在爱彼迎</p>
     </div>
-    <img :src="showMain[0].PicUrl" alt="">
+    <img :src="showMain.PicUrl" alt="">
     <div class="btn">
-      <button>{{showMain[0].desc}}</button>
+      <button>{{showMain.extra}}</button>
     </div>
   </div>
   <!-- 冬季特惠 -->
@@ -46,7 +46,7 @@ export default {
   data(){
     return {
       advData: [],
-      current:0,
+      current:null,
       showMain:[],
       preference:[]
     }
@@ -57,15 +57,14 @@ export default {
   },
   methods: {
     getData(){
-      wx.showLoading({
-        title: '加载中',
-    })
+      
       this.$http.get('')
       .then(res =>{
-        this.advData = res.data.advertise
-        this.showMain = res.data.generalize
+        // this.advData = res.data.advertise
+        // this.showMain = res.data.generalize
         this.preference = res.data.preference
-        wx.hideLoading();
+        // console.log(res.data.advertise)
+        
       })
       .catch(e => {
         console.log(e);
@@ -74,9 +73,31 @@ export default {
     currentHandle(event){      
       this.current = event.mp.detail.current
     },
+    getList(){
+      wx.showLoading({
+        title: '加载中',
+      })
+      const that = this
+      const db = wx.cloud.database({ env: 'bei-chen-gh1kk' })
+      // const db = wx.cloud.database()
+      const adv = db.collection('advertise')
+      const generalize = db.collection('generalize')
+      adv.get().then(res => {
+        this.current = 0
+        this.advData =  res.data
+        this.showMain = res.data[0]
+        // console.log(res.data)
+        wx.hideLoading();
+      })
+      generalize.get().then(res => {
+        console.log(res)
+        // this.showMain = res.data
+      })
+    }
   },
   onLoad(){
     this.getData()
+    this.getList()
   },
 }
 </script>
