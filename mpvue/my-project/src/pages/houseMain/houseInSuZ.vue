@@ -71,12 +71,12 @@ export default {
     getData(){
       fly.get('')
       .then(res =>{
-        this.Details = res.data.preference[0].house[0],
-        this.imgUrl = this.Details.swiperPic,
-        this.service = this.Details.service
-        this.facility = this.Details.facility
-        this.comments = this.Details.ratings
-        // console.log(this.comments)
+        // this.Details = res.data.preference[0].house[0],
+        // this.imgUrl = this.Details.swiperPic,
+        // this.service = this.Details.service
+        // this.facility = this.Details.facility
+        // this.comments = this.Details.ratings
+        console.log(':',res)
       })
     },
     routerSelect(){
@@ -85,12 +85,27 @@ export default {
         url
       });
     },
+    initData(){
+      const that = this
+      const db = wx.cloud.database({ env: 'bei-chen-gh1kk' })
+      const house = db.collection('house')
+      house.get().then( res => {
+        this.Details = res.data[0]
+        this.imgUrl = this.Details.swiperPic,
+        this.service = this.Details.service
+        this.facility = this.Details.facility
+        this.comments = this.Details.ratings[0]
+        console.log('awfjjfjhsdj')
+        console.log(this.comments)
+      })
+    },
     showPopup() {
       this.show = true;
     }
   },
   created(){
     this.getData()
+    this.initData()
   }
 }
 </script>

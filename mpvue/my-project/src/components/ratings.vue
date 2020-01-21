@@ -3,18 +3,18 @@
     <h1>房客评价</h1>
     <div class="user">
       <div class="avator">
-        <img :src="comments[0].usrimg" alt />
+        <img :src="comments.userImg" alt />
       </div>
       <div class="user-info">
-        <h2>{{comments[0].username}}</h2>
-        <p>{{comments[0].time}}</p>
+        <h2>{{comments.username}}</h2>
+        <p>{{comments.time}}</p>
       </div>
     </div>
     <div class="rating-main">
-      <p>{{comments[0].comment}}</p>
+      <p>{{comments.comment}}</p>
     </div>
     <div class="extra">
-      <span class="more">查看全部{{len}}条房客真实评价</span>
+      <span class="more">查看全部5条房客真实评价</span>
       <span class="star">
         <i-rate :disabled="true" :value="starIndex"></i-rate>
       </span>

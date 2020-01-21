@@ -91,7 +91,7 @@ export default {
 },
   created() {
     this.getCurMon(),  this.nextYear(), this.fullContent();
-    console.log(this.nextyear[0].year)
+    // console.log(this.nextyear[0].year)
   }
 };
 </script>

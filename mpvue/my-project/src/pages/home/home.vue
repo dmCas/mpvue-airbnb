@@ -30,7 +30,7 @@
     </div>
     <img :src="showMain.PicUrl" alt="">
     <div class="btn">
-      <button>{{showMain.extra}}</button>
+      <button>{{showMain.desc}}</button>
     </div>
   </div>
   <!-- 冬季特惠 -->
@@ -85,13 +85,12 @@ export default {
       adv.get().then(res => {
         this.current = 0
         this.advData =  res.data
-        this.showMain = res.data[0]
         // console.log(res.data)
         wx.hideLoading();
       })
       generalize.get().then(res => {
-        console.log(res)
-        // this.showMain = res.data
+        // console.log(res)
+        this.showMain = res.data[0]
       })
     }
   },
