@@ -13,8 +13,8 @@
     </swiper>
     <div class="main">
       <div class="chooseDate">
-        <div class="mark"><img src="../../../static/images/收藏 .png" alt=""></div>
-        <div class="share"><img src="../../../static/images/分享.png" alt=""></div>
+        <div class="mark"><img src="../../../static/images/shoucang.png" alt=""></div>
+        <div class="share"><img src="../../../static/images/share.png" alt=""></div>
         <span>入住-退房</span>
         <span @click="routerSelect" style="color:#218380;margin-left:30rpx;">添加日期</span>
       </div>

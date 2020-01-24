@@ -2,7 +2,7 @@
 <div>
   <div class="discount">
     <div class="main">
-      <div class="icon"><img src="../../static/images/提醒.png" alt=""></div>
+      <div class="icon"><img src="../../static/images/remind.png" alt=""></div>
       <div class="content">
         <span class="important">享受12月6日-12月19日期间的7折优惠</span>
         <span>在三天内完成预订，锁定限时好价</span>
@@ -10,7 +10,7 @@
     </div>
   </div>
   <div class="tip">
-    <img src="../../static/images/提示.png" alt="">
+    <img src="../../static/images/tishi.png" alt="">
     <p style="display:inline;vertical-align: middle;">预定成功后可邀请好友助力旅行基金，最高可返￥200</p>
   </div>
 </div>
