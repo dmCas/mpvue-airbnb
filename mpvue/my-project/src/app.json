@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/houseMain/main",
     "pages/home/main",
+    "pages/houseMain/main",
+
     "pages/mine/main",
     "pages/selectDate/main"
   ],
@@ -37,7 +38,7 @@
       },
       {
         "pagePath": "pages/home/main",
-        "iconPath": "static/images/shoucang .png",
+        "iconPath": "static/images/shoucang.png",
         "selectedIconPath": "static/images/icon_selected (4).png",
         "text": "收藏"
       },

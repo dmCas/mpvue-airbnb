@@ -10,7 +10,7 @@
         </div>
         <!-- <template is="date"/> -->
       </div>
-      <button>查找房源</button>
+      <button @click="a">查找房源</button>
     </div>
   </div>
 </template>
@@ -31,6 +31,12 @@ export default {
     chooseDate() {
       console.log(123);
       const url = "../../pages/selectDate/main";
+      wx.navigateTo({
+        url
+      });
+    },
+    a(){
+      const url = "../../pages/houseMain/main";
       wx.navigateTo({
         url
       });

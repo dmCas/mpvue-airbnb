@@ -2,47 +2,50 @@
   <div class="location">
     <h1>房源位置</h1>
     <div class="overview">
-      <h2>地址：苏州市 江苏省 中国</h2>
+      <h2>地址：{{location.site}}</h2>
       <div class="overview-main">
-        <p>位于石路步行街地铁口，距离苏州火车站2站地铁，距离山塘街1站地铁。距离各大景点都很近，我们会发详细旅游攻略给您。旁边就是停车场，10元12</p>
+        <p>{{location.overview}}</p>
         <span class="more" @click="showPopup">查看更多</span>
       </div>
     </div>
     <div class="overview outsuggestion">
       <h2>出行信息</h2>
       <div class="overview-main">
-        <p>位于石路步行街地铁口，距离苏州火车站2站地铁，距离山塘街1站地铁。距离各大景点都很近，我们会发详细旅游攻略给您。旁边就是停车场，10元12</p>
+        <p>{{location.outsuggestion}}</p>
         <span class="more" @click="showPopup">查看更多</span>
       </div>
     </div>
-    <div class="map">
+    
       <map
-        @click="getSelect"
+        @click="searchAddress"
         id="map"
         longitude="120.6020740000"
         latitude="31.3119640000"
         :markers="markers"
         scale="14"
         style="width: 100%; height: 200px;"
-        :enable-zoom="enablezoom"
+        :enable-zoom ="enablezoom"
         :enable-scroll="enablescroll"
         :enable-rotate="enablerotate"
       ></map>
-    </div>
+    
+    <div class="map-wrapper">
     <div class="map-more">
       <img src="../../static/images/site.png" alt />
-      <span>预定后将显示详细地址</span>
+      <span @click="searchAddress">预定后将显示详细地址</span>
+    </div>
     </div>
   </div>
 </template>
 
 <script>
 import QQMapWX from "../utils/map";
-    var qqmapsdk;
-    qqmapsdk = new QQMapWX({
-    key:'23SBZ-AJ36F-3GXJK-NZ2RE-5GH2Z-BABWF'
-    });
+var qqmapsdk;
+qqmapsdk = new QQMapWX({
+  key: "23SBZ-AJ36F-3GXJK-NZ2RE-5GH2Z-BABWF"
+});
 export default {
+  props: ["location"],
   data() {
     return {
       enablezoom: false,
@@ -51,7 +54,7 @@ export default {
       markers: [
         {
           iconPath: "../../static/images/biaoshi.png",
-          id: 0,
+          id: "Wesaadada",
           latitude: 31.311964,
           longitude: 120.602074,
           width: 50,
@@ -79,16 +82,15 @@ export default {
   //   });
   // },
   methods: {
-    getSelect(){
-      const latitude = this.markers[0].latitude
-      const longitude = this.markers[0].longitude
-      console.log(this.markers[0])
+    searchAddress() {
+      const latitude = 31.311964;
+      const longitude = 120.602074;
       wx.openLocation({
         latitude,
         longitude,
-        scale: 28,
-        name:"近平江/山塘/苏州站/苏州北站/拙政园/苏州博物馆+地铁口旁【书生】",
-        address:"苏州市 江苏省 中国"
+        scale: 16,
+        name: "近平江/山塘/苏州站/苏州北站/拙政园/苏州博物馆+地铁口旁【书生】",
+        address: "苏州市 江苏省 中国"
         // const latitude = res.latitude
         // const longitude = res.longitude
         // wx.openLocation({
@@ -96,8 +98,7 @@ export default {
         //   longitude,
         //   scale: 18
         // })
-      }
-    )
+      });
     }
   }
 };
@@ -133,7 +134,7 @@ export default {
 .location .overview .overview-main .more {
   color: #218380;
 }
-.location .map {
+.location .map-wrapper {
   padding: 30rpx 0 30rpx 0;
 }
 .location .map-more {

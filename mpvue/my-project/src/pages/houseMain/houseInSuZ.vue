@@ -37,7 +37,7 @@
       <v-service :service="service"></v-service>
       <v-facility :facility="facility"></v-facility>
       <v-ratings :comments="comments"></v-ratings>
-      <v-location></v-location>
+      <v-location :location="location"></v-location>
     </div>
   </div>
 </template>
@@ -57,7 +57,8 @@ export default {
       show:false,
       service:[],
       facility:[],
-      comments:[]
+      comments:[],
+      location: []
     }
   },
   components:{
@@ -68,17 +69,17 @@ export default {
     'v-location':location
   },
   methods: {
-    getData(){
-      fly.get('')
-      .then(res =>{
-        // this.Details = res.data.preference[0].house[0],
-        // this.imgUrl = this.Details.swiperPic,
-        // this.service = this.Details.service
-        // this.facility = this.Details.facility
-        // this.comments = this.Details.ratings
-        console.log(':',res)
-      })
-    },
+    // getData(){
+    //   fly.get('')
+    //   .then(res =>{
+    //     // this.Details = res.data.preference[0].house[0],
+    //     // this.imgUrl = this.Details.swiperPic,
+    //     // this.service = this.Details.service
+    //     // this.facility = this.Details.facility
+    //     // this.comments = this.Details.ratings
+    //     console.log(':',res)
+    //   })
+    // },
     routerSelect(){
       const url = "../../pages/selectDate/main";
       wx.navigateTo({
@@ -95,8 +96,9 @@ export default {
         this.service = this.Details.service
         this.facility = this.Details.facility
         this.comments = this.Details.ratings[0]
-        console.log('awfjjfjhsdj')
-        console.log(this.comments)
+        this.location = this.Details.location[0]
+        // console.log('awfjjfjhsdj')
+        // console.log(this.location)
       })
     },
     showPopup() {
@@ -104,7 +106,7 @@ export default {
     }
   },
   created(){
-    this.getData()
+    // this.getData()
     this.initData()
   }
 }

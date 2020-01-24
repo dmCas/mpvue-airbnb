@@ -56,20 +56,20 @@ export default {
     'v-preference':preference
   },
   methods: {
-    getData(){
+    // getData(){
       
-      this.$http.get('')
-      .then(res =>{
-        // this.advData = res.data.advertise
-        // this.showMain = res.data.generalize
-        this.preference = res.data.preference
-        // console.log(res.data.advertise)
+    //   this.$http.get('')
+    //   .then(res =>{
+    //     // this.advData = res.data.advertise
+    //     // this.showMain = res.data.generalize
+    //     this.preference = res.data.preference
+    //     // console.log(res.data.advertise)
         
-      })
-      .catch(e => {
-        console.log(e);
-      })
-    },  
+    //   })
+    //   .catch(e => {
+    //     console.log(e);
+    //   })
+    // },  
     currentHandle(event){      
       this.current = event.mp.detail.current
     },
@@ -95,7 +95,7 @@ export default {
     }
   },
   onLoad(){
-    this.getData()
+    // this.getData()
     this.getList()
   },
 }
