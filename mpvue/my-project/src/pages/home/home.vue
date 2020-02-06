@@ -81,7 +81,9 @@ export default {
       const db = wx.cloud.database({ env: 'bei-chen-gh1kk' })
       // const db = wx.cloud.database()
       const adv = db.collection('advertise')
+      const preference = db.collection('preference')
       const generalize = db.collection('generalize')
+      const houseInfo = db.collection('houseInfo')
       adv.get().then(res => {
         this.current = 0
         this.advData =  res.data
@@ -92,7 +94,20 @@ export default {
         // console.log(res)
         this.showMain = res.data[0]
       })
+      preference.get().then(res => {
+        this.preference = res.data
+      })
+      // houseInfo.get().then(res => {
+      //   //  console.log(res)
+      // })
+      wx.cloud.callFunction({
+        name: 'getHouse',
+        data: {}
+      }).then(()=>{
+        console.log('成功')
+      })
     }
+
   },
   onLoad(){
     // this.getData()
