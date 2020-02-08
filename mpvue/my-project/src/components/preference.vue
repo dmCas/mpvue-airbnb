@@ -8,18 +8,18 @@
       </ul>
     </scroll-view>
     <div v-for="(city,cityid) in preference" :key="cityid" class="showHouse">
-      <div v-if="city.cityId == select" class="cho">
-        <div class="house" v-for="(house,houseid) in city.house" :key="houseid" v-show="houseid<defalut" @click="router(house.houseId,city.city)">
+      <div v-if="city.cityId == 8" class="cho">
+        <div class="house" v-for="(house,houseid) in hangzhou" :key="houseid" v-show="houseid<defalut" @click="router(house.houseId,city.city)">
           <div class="pic"><img :src="house.showPic" alt=""></div>
           <div class="info">
             <p style="font-size:20rpx;">{{house.type}}</p>
-            <p style="font-size:22rpx;" class="position">{{house.housePositon}}</p>
+            <p style="font-size:22rpx;" class="position">{{house.housePosition}}</p>
             <span style="font-size:22rpx;font-weight:bolder">{{house.NewPrice}}</span>
             <span style="font-size:20rpx;text-decoration:line-through;">{{house.OldPrice}}</span>
             <span style="font-size:20rpx;"> 每晚</span>
           </div>
         </div>
-        <div class="more" @click="showMore(city.house.length)" v-show="ifMore"><button>显示更多{{city.city}}的房源</button></div>
+        <div class="more" @click="showMore(hangzhou.length)" v-show="ifMore"><button>显示更多{{city.city}}的房源</button></div>
       </div>
     </div>
 
@@ -28,7 +28,7 @@
 
 <script>
 export default {
-  props:['preference'],
+  props:['preference', 'hangzhou'],
   data(){
     return {
       select:1,

@@ -34,7 +34,7 @@
     </div>
   </div>
   <!-- 冬季特惠 -->
-  <v-preference :preference="preference"></v-preference>
+  <v-preference :preference="preference" :hangzhou="hangzhou"></v-preference>
 </div>
 </template>
 
@@ -48,7 +48,8 @@ export default {
       advData: [],
       current:null,
       showMain:[],
-      preference:[]
+      preference:[],
+      hangzhou:[]
     }
   },
   components: {
@@ -102,9 +103,12 @@ export default {
       // })
       wx.cloud.callFunction({
         name: 'getHouse',
-        data: {}
-      }).then(()=>{
-        console.log('成功')
+        data:{
+          city:'杭州'
+        }
+      }).then(res=>{
+        this.hangzhou = res.result.hangzhou.data
+        console.log(res.result.hangzhou.data)
       })
     }
 
