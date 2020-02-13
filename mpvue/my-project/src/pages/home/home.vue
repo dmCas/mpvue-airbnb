@@ -34,7 +34,7 @@
     </div>
   </div>
   <!-- 冬季特惠 -->
-  <v-preference :preference="preference" :hangzhou="hangzhou"></v-preference>
+  <v-preference :preference="preference" :houseList="houseList"></v-preference>
 </div>
 </template>
 
@@ -49,7 +49,7 @@ export default {
       current:null,
       showMain:[],
       preference:[],
-      hangzhou:[]
+      houseList:[]
     }
   },
   components: {
@@ -101,17 +101,16 @@ export default {
       // houseInfo.get().then(res => {
       //   //  console.log(res)
       // })
-      wx.cloud.callFunction({
-        name: 'getHouse',
-        data:{
-          city:'杭州'
-        }
-      }).then(res=>{
-        this.hangzhou = res.result.hangzhou.data
-        console.log(res.result.hangzhou.data)
-      })
+      // wx.cloud.callFunction({
+      //   name: 'getHouse',
+      //   data:{
+      //     cityId:1
+      //   }
+      // }).then(res=>{
+      //   this.houseList = res.result.data
+      //   console.log(res.result.data)
+      // })
     }
-
   },
   onLoad(){
     // this.getData()
@@ -169,7 +168,6 @@ swiper-item image{
 .swp-dot .m-r{
   margin-right: 10rpx;
 }
-
 .swp-dot .active{
   background-color: white;
   width: 36rpx;

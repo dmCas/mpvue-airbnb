@@ -8,8 +8,8 @@
       </ul>
     </scroll-view>
     <div v-for="(city,cityid) in preference" :key="cityid" class="showHouse">
-      <div v-if="city.cityId == 8" class="cho">
-        <div class="house" v-for="(house,houseid) in hangzhou" :key="houseid" v-show="houseid<defalut" @click="router(house.houseId,city.city)">
+      <div v-if="city.cityId == select" class="cho">
+        <div class="house" v-for="(house,houseid) in houseList" :key="houseid" v-show="houseid<defalut" @click="router(house.houseId,city.city)">
           <div class="pic"><img :src="house.showPic" alt=""></div>
           <div class="info">
             <p style="font-size:20rpx;">{{house.type}}</p>
@@ -19,7 +19,7 @@
             <span style="font-size:20rpx;"> 每晚</span>
           </div>
         </div>
-        <div class="more" @click="showMore(hangzhou.length)" v-show="ifMore"><button>显示更多{{city.city}}的房源</button></div>
+        <div class="more" @click="showMore(houseList.length)" v-show="ifMore"><button>显示更多{{city.city}}的房源</button></div>
       </div>
     </div>
 
@@ -28,18 +28,28 @@
 
 <script>
 export default {
-  props:['preference', 'hangzhou'],
+  props:['preference'],
   data(){
     return {
       select:1,
       ifMore:true,
-      defalut:4
+      defalut:4,
+      houseList: []
     }
   },
   methods:{
     change(item){
       this.select = item
       this.ifMore = true
+      // wx.cloud.callFunction({
+      //   name: 'getHouse',
+      //   data:{
+      //     cityId:this.select
+      //   }
+      // }).then(res=>{
+      //   this.houseList = res.result.data
+      //   console.log(res.result.data)
+      // })
     },
     showMore(len){
       this.defalut = len,
@@ -52,9 +62,24 @@ export default {
         url
       });
       }
+    },
+    getHouseList(){
+      wx.cloud.callFunction({
+        name: 'getHouse',
+        data:{
+          cityId:this.select
+        }
+      }).then(res=>{
+        this.houseList = res.result.data
+        console.log(res.result.data)
+      })
+    },
+    },
+    onLoad(){
+      // this.getData()
+      this.getHouseList()
     }
   }
-}
 </script>
 
 <style>
@@ -92,7 +117,6 @@ ul li{
   width: 100%;
 }
 .cho{
-
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
