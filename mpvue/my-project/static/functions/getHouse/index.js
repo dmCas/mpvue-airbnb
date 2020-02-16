@@ -5,9 +5,15 @@ const db = cloud.database()
 // 云函数入口函数
 exports.main = async (event, context) => {
   const houseList = await db.collection('houseInfo')
-0
   .get()
-
-  return houseList
+  const listHouse =  await db.collection('houseInfo')
+  .where({
+    cityId: event.cityId
+  })
+  .get()
+  return {
+    houseList,
+    listHouse
+  }
 }
 ///

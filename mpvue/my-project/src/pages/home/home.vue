@@ -34,7 +34,7 @@
     </div>
   </div>
   <!-- 冬季特惠 -->
-  <v-preference :preference="preference" :houseList="houseList"></v-preference>
+  <v-preference :preference="preference" :houseList="houseList" :listHouse="listHouse"></v-preference>
 </div>
 </template>
 
@@ -49,7 +49,8 @@ export default {
       current:null,
       showMain:[],
       preference:[],
-      houseList:[]
+      houseList:[],
+      listHouse: []
     }
   },
   components: {
@@ -101,15 +102,16 @@ export default {
       // houseInfo.get().then(res => {
       //   //  console.log(res)
       // })
-      // wx.cloud.callFunction({
-      //   name: 'getHouse',
-      //   data:{
-      //     cityId:1
-      //   }
-      // }).then(res=>{
-      //   this.houseList = res.result.data
-      //   console.log(res.result.data)
-      // })
+      wx.cloud.callFunction({
+        name: 'getHouse',
+        data:{
+          cityId: 1
+        }
+      }).then(res=>{
+        this.houseList = res.result.houseList.data
+        this.listHouse = res.result.listHouse.data
+        console.log(res.result.listHouse.data)
+      })
     }
   },
   onLoad(){
